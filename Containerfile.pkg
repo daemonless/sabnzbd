@@ -1,0 +1,48 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+LABEL org.opencontainers.image.title="sabnzbd" \
+      org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
+      org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
+      org.opencontainers.image.url="https://sabnzbd.org/" \
+      org.opencontainers.image.documentation="https://sabnzbd.org/wiki/" \
+      org.opencontainers.image.licenses="GPL-2.0-or-later" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.port="8080" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.volumes="/downloads"
+
+# Install SABnzbd from FreeBSD packages
+# pkg handles all dependencies and creates sabnzbd user
+RUN pkg update && \
+    pkg install -y sabnzbd && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Override package_info to show container update instructions
+RUN SABNZBD_VERSION=$(pkg info sabnzbd | sed -n 's/.*Version.*: *//p') && \
+    printf "UpdateMethod=docker\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$SABNZBD_VERSION" > /usr/local/share/sabnzbd/package_info && \
+    mkdir -p /app && echo "$SABNZBD_VERSION" > /app/version
+
+# Create config directory (permissions set by init script based on PUID/PGID)
+RUN mkdir -p /config /downloads/complete /downloads/incomplete
+
+# Copy service definition
+COPY root/ /
+
+# Use pkg-specific scripts
+COPY root/etc/services.d/sabnzbd/run.pkg /etc/services.d/sabnzbd/run
+COPY root/etc/cont-init.d/20-sabnzbd-config.pkg /etc/cont-init.d/20-sabnzbd-config
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/sabnzbd/run /etc/cont-init.d/* 2>/dev/null || true
+
+# Set up s6 service link
+RUN mkdir -p /run/s6/services/sabnzbd && \
+    ln -sf /etc/services.d/sabnzbd/run /run/s6/services/sabnzbd/run
+
+EXPOSE 8080
+VOLUME /config /downloads
+

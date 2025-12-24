@@ -1,0 +1,6 @@
+#!/bin/sh
+# SABnzbd s6 service (pkg version)
+
+export HOME=/config
+
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/python3.11 /usr/local/bin/SABnzbd.py --config-file /config/sabnzbd.ini --server 0.0.0.0:8080

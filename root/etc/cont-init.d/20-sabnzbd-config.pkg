@@ -1,0 +1,26 @@
+#!/bin/sh
+# Initialize SABnzbd config (pkg version)
+
+echo "[sabnzbd-pkg] Setting up config directory"
+
+# Ensure directories exist and have correct ownership (bsd user configured by base image)
+mkdir -p /config /downloads/complete /downloads/incomplete
+chown -R bsd:bsd /config /downloads
+
+# If HOST_WHITELIST is set and no config exists, create initial config
+if [ -n "${HOST_WHITELIST}" ] && [ ! -f /config/sabnzbd.ini ]; then
+    echo "[sabnzbd-pkg] Creating initial config with HOST_WHITELIST: ${HOST_WHITELIST}"
+    cat > /config/sabnzbd.ini << EOF
+__version__ = 19
+__encoding__ = utf-8
+[misc]
+host = 0.0.0.0
+port = 8080
+host_whitelist = ${HOST_WHITELIST}
+download_dir = /downloads/incomplete
+complete_dir = /downloads/complete
+EOF
+    chown bsd:bsd /config/sabnzbd.ini
+fi
+
+echo "[sabnzbd-pkg] Configuration complete"

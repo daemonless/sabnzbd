@@ -1,0 +1,33 @@
+#!/bin/sh
+# Initialize SABnzbd config
+
+# Set ownership based on PUID/PGID environment variables
+PUID=${PUID:-1000}
+PGID=${PGID:-1000}
+
+# Update sabnzbd user/group IDs if different from default
+if [ "$PUID" != "359" ] || [ "$PGID" != "359" ]; then
+    echo "Setting sabnzbd UID:GID to $PUID:$PGID"
+    pw groupmod sabnzbd -g "$PGID" 2>/dev/null || true
+fi
+
+# Ensure directories exist and have correct ownership
+mkdir -p /config /downloads/complete /downloads/incomplete
+chown -R bsd:bsd /config /downloads /app/sabnzbd
+
+# If HOST_WHITELIST is set and no config exists, create initial config
+# This allows users to set the whitelist via environment variable
+if [ -n "${HOST_WHITELIST}" ] && [ ! -f /config/sabnzbd.ini ]; then
+    echo "Creating initial config with HOST_WHITELIST: ${HOST_WHITELIST}"
+    cat > /config/sabnzbd.ini << EOF
+__version__ = 19
+__encoding__ = utf-8
+[misc]
+host = 0.0.0.0
+port = 8080
+host_whitelist = ${HOST_WHITELIST}
+download_dir = /downloads/incomplete
+complete_dir = /downloads/complete
+EOF
+    chown bsd:bsd /config/sabnzbd.ini
+fi
