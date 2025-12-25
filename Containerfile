@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="python311 py311-pip py311-setuptools py311-sqlite3 py311-cryptography py311-feedparser py311-configobj py311-cherrypy py311-portend py311-chardet py311-pysocks py311-sabctools py311-guessit py311-puremagic py311-rarfile py311-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
 
-LABEL org.opencontainers.image.title="sabnzbd" \
+LABEL org.opencontainers.image.title="SABnzbd" \
     org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
     org.opencontainers.image.url="https://sabnzbd.org/" \

@@ -2,7 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-LABEL org.opencontainers.image.title="sabnzbd" \
+LABEL org.opencontainers.image.title="SABnzbd" \
       org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
       org.opencontainers.image.url="https://sabnzbd.org/" \
