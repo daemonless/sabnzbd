@@ -2,41 +2,28 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="python311 py311-pip py311-setuptools py311-sqlite3 py311-cryptography py311-feedparser py311-configobj py311-cherrypy py311-portend py311-chardet py311-pysocks py311-sabctools py311-guessit py311-puremagic py311-rarfile py311-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
+
 LABEL org.opencontainers.image.title="sabnzbd" \
-      org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
-      org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
-      org.opencontainers.image.url="https://sabnzbd.org/" \
-      org.opencontainers.image.documentation="https://sabnzbd.org/wiki/" \
-      org.opencontainers.image.licenses="GPL-2.0-or-later" \
-      org.opencontainers.image.vendor="daemonless" \
-      org.opencontainers.image.authors="daemonless" \
-      io.daemonless.port="8080" \
-      io.daemonless.arch="${FREEBSD_ARCH}" \
-      io.daemonless.volumes="/downloads"
+    org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
+    org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
+    org.opencontainers.image.url="https://sabnzbd.org/" \
+    org.opencontainers.image.documentation="https://sabnzbd.org/wiki/" \
+    org.opencontainers.image.licenses="GPL-2.0-or-later" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.port="8080" \
+    io.daemonless.arch="${FREEBSD_ARCH}" \
+    io.daemonless.volumes="/downloads" \
+    io.daemonless.category="Downloaders" \
+    io.daemonless.upstream-mode="github" \
+    io.daemonless.upstream-repo="sabnzbd/sabnzbd" \
+    io.daemonless.packages="${PACKAGES}"
 
 # Install dependencies
 RUN pkg update && \
     pkg install -y \
-        python311 \
-        py311-pip \
-        py311-setuptools \
-        py311-sqlite3 \
-        py311-cryptography \
-        py311-feedparser \
-        py311-configobj \
-        py311-cherrypy \
-        py311-portend \
-        py311-chardet \
-        py311-pysocks \
-        py311-sabctools \
-        py311-guessit \
-        py311-puremagic \
-        py311-rarfile \
-        py311-apprise \
-        par2cmdline-turbo \
-        unrar \
-        7-zip \
-        ca_root_nss && \
+    ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
