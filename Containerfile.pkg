@@ -2,6 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=sabnzbd
 LABEL org.opencontainers.image.title="SABnzbd" \
       org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
@@ -12,17 +13,17 @@ LABEL org.opencontainers.image.title="SABnzbd" \
       org.opencontainers.image.authors="daemonless" \
       io.daemonless.port="8080" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
-      io.daemonless.volumes="/downloads"
+      io.daemonless.volumes="/downloads" \
+      io.daemonless.pkg-name="${PKG_NAME}"
 
-# Install SABnzbd from FreeBSD packages
-# pkg handles all dependencies and creates sabnzbd user
+# Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y sabnzbd && \
+    pkg install -y ${PKG_NAME} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Override package_info to show container update instructions
-RUN SABNZBD_VERSION=$(pkg info sabnzbd | sed -n 's/.*Version.*: *//p') && \
+RUN SABNZBD_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
     printf "UpdateMethod=docker\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$SABNZBD_VERSION" > /usr/local/share/sabnzbd/package_info && \
     mkdir -p /app && echo "$SABNZBD_VERSION" > /app/version
 
