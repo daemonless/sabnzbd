@@ -28,15 +28,13 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install SABnzbd from GitHub
-# Note: We use || true on tar because some translation files have UTF-8 names
-# that FreeBSD's minimal container locale can't handle - these are non-critical
 RUN mkdir -p /app/sabnzbd && \
     chmod 755 /app && \
     fetch -qo /tmp/release.json "https://api.github.com/repos/sabnzbd/sabnzbd/releases/latest" && \
     SABNZBD_VERSION=$(grep -o '"tag_name": *"[^"]*"' /tmp/release.json | sed 's/"tag_name": *"//;s/"//') && \
     echo "Downloading SABnzbd ${SABNZBD_VERSION}" && \
     fetch -qo /tmp/sabnzbd.tar.gz "https://github.com/sabnzbd/sabnzbd/releases/download/${SABNZBD_VERSION}/SABnzbd-${SABNZBD_VERSION}-src.tar.gz" && \
-    (tar xzf /tmp/sabnzbd.tar.gz -C /app/sabnzbd --strip-components=1 2>/dev/null || true) && \
+    LANG=C.UTF-8 tar xzf /tmp/sabnzbd.tar.gz -C /app/sabnzbd --strip-components=1 && \
     test -f /app/sabnzbd/SABnzbd.py && \
     chmod -R o+rX /app/sabnzbd && \
     printf "UpdateMethod=docker\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$SABNZBD_VERSION" > /app/sabnzbd/package_info && \
