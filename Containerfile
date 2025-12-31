@@ -32,8 +32,7 @@ RUN pkg update && \
 # Download and install SABnzbd from GitHub
 RUN mkdir -p /app/sabnzbd && \
     chmod 755 /app && \
-    SABNZBD_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | \
-    sed -n "${UPSTREAM_SED}" | head -1) && \
+    SABNZBD_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | jq -r "${UPSTREAM_JQ}") && \
     echo "Downloading SABnzbd ${SABNZBD_VERSION}" && \
     fetch -qo /tmp/sabnzbd.tar.gz "https://github.com/sabnzbd/sabnzbd/releases/download/${SABNZBD_VERSION}/SABnzbd-${SABNZBD_VERSION}-src.tar.gz" && \
     LANG=C.UTF-8 tar xzf /tmp/sabnzbd.tar.gz -C /app/sabnzbd --strip-components=1 && \
