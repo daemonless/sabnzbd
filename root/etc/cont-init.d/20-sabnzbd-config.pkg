@@ -1,6 +1,9 @@
 #!/bin/sh
 # Initialize SABnzbd config (pkg version)
 
+# Only run if pkg version is installed
+[ -d /usr/local/share/sabnzbd ] || exit 0
+
 echo "[sabnzbd-pkg] Setting up config directory"
 
 # Ensure directories exist and have correct ownership (bsd user configured by base image)

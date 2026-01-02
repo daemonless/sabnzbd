@@ -1,6 +1,9 @@
 #!/bin/sh
 # Initialize SABnzbd config
 
+# Only run if manual install version exists
+[ -d /app/sabnzbd ] || exit 0
+
 # Set ownership based on PUID/PGID environment variables
 PUID=${PUID:-1000}
 PGID=${PGID:-1000}
