@@ -1,0 +1,5 @@
+icon: ':material-download-network:'
+cit:
+  mode: screenshot
+  port: 8080
+  health: /api?mode=version
