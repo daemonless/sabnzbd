@@ -1,0 +1,41 @@
+name: sabnzbd
+
+x-daemonless:
+  title: "SABnzbd"
+  icon: ":material-download-network:"
+  category: "Downloaders"
+  description: "SABnzbd Usenet downloader on FreeBSD."
+  upstream_url: "https://github.com/sabnzbd/sabnzbd"
+  web_url: "https://sabnzbd.org/"
+  freshports_url: "https://www.freshports.org/news/sabnzbd/"
+  user: "bsd"
+  mlock: false
+  
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration directory"
+      /downloads: "Download directory"
+    ports:
+      8080: "Web UI"
+
+services:
+  sabnzbd:
+    image: ghcr.io/daemonless/sabnzbd:latest
+    container_name: sabnzbd
+    restart: unless-stopped
+    
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/sabnzbd:/config
+      - /path/to/downloads:/downloads
+
+    ports:
+      - 8080:8080

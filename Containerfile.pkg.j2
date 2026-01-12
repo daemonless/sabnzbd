@@ -5,17 +5,24 @@ ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=sabnzbd
 
 # --- Metadata (Injected by Generator) ---
-LABEL org.opencontainers.image.title="SABnzbd" \
-      org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD." \
-      org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
-      org.opencontainers.image.url="https://sabnzbd.org/" \
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
       org.opencontainers.image.documentation="https://sabnzbd.org/wiki/" \
       org.opencontainers.image.licenses="GPL-2.0-or-later" \
       org.opencontainers.image.vendor="daemonless" \
       org.opencontainers.image.authors="daemonless" \
-      io.daemonless.category="Downloaders" \
-      io.daemonless.port="8080" \
-      io.daemonless.volumes="/config,/downloads" \
+      io.daemonless.category="{{ category }}" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
+{%- if volumes %}
+      io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
+{%- endif %}
+{%- if mlock %}
+      org.freebsd.jail.allow.mlock="required" \
+{%- endif %}
       io.daemonless.pkg-name="${PKG_NAME}" \
       io.daemonless.arch="${FREEBSD_ARCH}"
 
@@ -47,7 +54,11 @@ RUN mkdir -p /run/s6/services/sabnzbd && \
     ln -sf /etc/services.d/sabnzbd/run /run/s6/services/sabnzbd/run
 
 # --- Expose (Injected by Generator) ---
-EXPOSE 8080
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
 
 # --- Volumes (Injected by Generator) ---
-VOLUME /config /downloads
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}
