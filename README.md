@@ -11,6 +11,7 @@ SABnzbd Usenet downloader on FreeBSD.
 |---|---|
 | **Port** | 8080 |
 | **Registry** | `ghcr.io/daemonless/sabnzbd` |
+| **Docs** | [daemonless.io/images/sabnzbd](https://daemonless.io/images/sabnzbd/) |
 | **Source** | [https://github.com/sabnzbd/sabnzbd](https://github.com/sabnzbd/sabnzbd) |
 | **Website** | [https://sabnzbd.org/](https://sabnzbd.org/) |
 
