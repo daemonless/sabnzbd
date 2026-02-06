@@ -1,11 +1,12 @@
 {
   "image": "sabnzbd",
-  "generated": "2026-02-02T13:49:05Z",
+  "generated": "2026-02-06T00:27:15Z",
   "tags": {
     "latest": {
+      "arch": "amd64",
       "app_version": "4.5.5",
       "source": "upstream-binary",
-      "generated": "2026-02-02T13:44:23Z",
+      "generated": "2026-02-06T00:14:38Z",
       "packages": {
         "freebsd": [
           {
@@ -410,23 +411,229 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "Cheetah3",
+            "version": "3.2.6"
+          },
+          {
+            "name": "CherryPy",
+            "version": "18.10.0"
+          },
+          {
+            "name": "FormEncode",
+            "version": "2.1.0"
+          },
+          {
+            "name": "PyYAML",
+            "version": "6.0.3"
+          },
+          {
+            "name": "SQLObject",
+            "version": "3.11.0"
+          },
+          {
+            "name": "apprise",
+            "version": "1.8.1"
+          },
+          {
+            "name": "autocommand",
+            "version": "2.2.2"
+          },
+          {
+            "name": "babelfish",
+            "version": "0.6.1"
+          },
+          {
+            "name": "backports.tarfile",
+            "version": "1.0.0"
+          },
+          {
+            "name": "blinker",
+            "version": "1.9.0"
+          },
+          {
+            "name": "certifi",
+            "version": "2025.11.12"
+          },
+          {
+            "name": "cffi",
+            "version": "1.17.1"
+          },
+          {
+            "name": "chardet",
+            "version": "5.2.0"
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.4"
+          },
+          {
+            "name": "cheroot",
+            "version": "11.1.2"
+          },
+          {
+            "name": "click",
+            "version": "8.1.7"
+          },
+          {
+            "name": "configobj",
+            "version": "5.0.9"
+          },
+          {
+            "name": "cryptography",
+            "version": "45.0.7"
+          },
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "feedparser",
+            "version": "6.0.12"
+          },
+          {
+            "name": "gntp",
+            "version": "1.0.3"
+          },
+          {
+            "name": "guessit",
+            "version": "3.8.0"
+          },
+          {
+            "name": "idna",
+            "version": "3.11"
+          },
+          {
+            "name": "importlib-resources",
+            "version": "6.5.2"
+          },
+          {
+            "name": "jaraco.collections",
+            "version": "5.1.0"
+          },
+          {
+            "name": "jaraco.context",
+            "version": "5.3.0"
+          },
+          {
+            "name": "jaraco.functools",
+            "version": "4.4.0"
+          },
+          {
+            "name": "jaraco.text",
+            "version": "4.0.0"
+          },
+          {
+            "name": "markdown",
+            "version": "3.10"
+          },
+          {
+            "name": "more-itertools",
+            "version": "10.6.0"
+          },
+          {
+            "name": "oauthlib",
+            "version": "3.3.1"
+          },
+          {
+            "name": "paho-mqtt",
+            "version": "2.1.0"
+          },
+          {
+            "name": "pip",
+            "version": "23.3.2"
+          },
+          {
+            "name": "portend",
+            "version": "2.5"
+          },
+          {
+            "name": "puremagic",
+            "version": "1.24"
+          },
+          {
+            "name": "pycparser",
+            "version": "2.23"
+          },
+          {
+            "name": "pyjwt",
+            "version": "2.10.1"
+          },
+          {
+            "name": "pysocks",
+            "version": "1.7.1"
+          },
+          {
+            "name": "python-dateutil",
+            "version": "2.9.0"
+          },
+          {
+            "name": "rarfile",
+            "version": "4.1"
+          },
+          {
+            "name": "rebulk",
+            "version": "3.2.0"
+          },
+          {
+            "name": "requests",
+            "version": "2.32.5"
+          },
+          {
+            "name": "requests-oauthlib",
+            "version": "2.0.0"
+          },
+          {
+            "name": "sabctools",
+            "version": "8.2.6"
+          },
+          {
+            "name": "setuptools",
+            "version": "63.1.0"
+          },
+          {
+            "name": "sgmllib3k",
+            "version": "1.0.0"
+          },
+          {
+            "name": "six",
+            "version": "1.17.0"
+          },
+          {
+            "name": "sqlite3",
+            "version": "3.11.14"
+          },
+          {
+            "name": "tempora",
+            "version": "5.8.1"
+          },
+          {
+            "name": "urllib3",
+            "version": "2.6.2"
+          },
+          {
+            "name": "zc.lockfile",
+            "version": "3.0.post1"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 51,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 151
       }
     },
     "pkg-latest": {
+      "arch": "amd64",
       "app_version": "4.5.5",
       "source": "freebsd-latest",
-      "generated": "2026-02-02T13:42:36Z",
+      "generated": "2026-02-06T00:27:04Z",
       "packages": {
         "freebsd": [
           {
@@ -831,23 +1038,225 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "Cheetah3",
+            "version": "3.2.6"
+          },
+          {
+            "name": "CherryPy",
+            "version": "18.10.0"
+          },
+          {
+            "name": "FormEncode",
+            "version": "2.1.0"
+          },
+          {
+            "name": "PyYAML",
+            "version": "6.0.3"
+          },
+          {
+            "name": "SQLObject",
+            "version": "3.11.0"
+          },
+          {
+            "name": "apprise",
+            "version": "1.8.1"
+          },
+          {
+            "name": "autocommand",
+            "version": "2.2.2"
+          },
+          {
+            "name": "babelfish",
+            "version": "0.6.1"
+          },
+          {
+            "name": "backports.tarfile",
+            "version": "1.0.0"
+          },
+          {
+            "name": "blinker",
+            "version": "1.9.0"
+          },
+          {
+            "name": "certifi",
+            "version": "2026.1.4"
+          },
+          {
+            "name": "cffi",
+            "version": "2.0.0"
+          },
+          {
+            "name": "chardet",
+            "version": "5.2.0"
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.4"
+          },
+          {
+            "name": "cheroot",
+            "version": "11.1.2"
+          },
+          {
+            "name": "click",
+            "version": "8.1.7"
+          },
+          {
+            "name": "configobj",
+            "version": "5.0.9"
+          },
+          {
+            "name": "cryptography",
+            "version": "46.0.3"
+          },
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "feedparser",
+            "version": "6.0.12"
+          },
+          {
+            "name": "gntp",
+            "version": "1.0.3"
+          },
+          {
+            "name": "guessit",
+            "version": "3.8.0"
+          },
+          {
+            "name": "idna",
+            "version": "3.11"
+          },
+          {
+            "name": "importlib-resources",
+            "version": "6.5.2"
+          },
+          {
+            "name": "jaraco.collections",
+            "version": "5.1.0"
+          },
+          {
+            "name": "jaraco.context",
+            "version": "6.1.0"
+          },
+          {
+            "name": "jaraco.functools",
+            "version": "4.4.0"
+          },
+          {
+            "name": "jaraco.text",
+            "version": "4.0.0"
+          },
+          {
+            "name": "markdown",
+            "version": "3.10"
+          },
+          {
+            "name": "more-itertools",
+            "version": "10.6.0"
+          },
+          {
+            "name": "oauthlib",
+            "version": "3.3.1"
+          },
+          {
+            "name": "paho-mqtt",
+            "version": "2.1.0"
+          },
+          {
+            "name": "portend",
+            "version": "2.5"
+          },
+          {
+            "name": "puremagic",
+            "version": "1.24"
+          },
+          {
+            "name": "pybonjour",
+            "version": "1.1.1"
+          },
+          {
+            "name": "pycparser",
+            "version": "2.23"
+          },
+          {
+            "name": "pyjwt",
+            "version": "2.10.1"
+          },
+          {
+            "name": "pysocks",
+            "version": "1.7.1"
+          },
+          {
+            "name": "python-dateutil",
+            "version": "2.9.0"
+          },
+          {
+            "name": "rarfile",
+            "version": "4.1"
+          },
+          {
+            "name": "rebulk",
+            "version": "3.2.0"
+          },
+          {
+            "name": "requests",
+            "version": "2.32.5"
+          },
+          {
+            "name": "requests-oauthlib",
+            "version": "2.0.0"
+          },
+          {
+            "name": "sabctools",
+            "version": "8.2.6"
+          },
+          {
+            "name": "sgmllib3k",
+            "version": "1.0.0"
+          },
+          {
+            "name": "six",
+            "version": "1.17.0"
+          },
+          {
+            "name": "sqlite3",
+            "version": "3.11.14"
+          },
+          {
+            "name": "tempora",
+            "version": "5.8.1"
+          },
+          {
+            "name": "urllib3",
+            "version": "2.6.3"
+          },
+          {
+            "name": "zc.lockfile",
+            "version": "3.0.post1"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 50,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 150
       }
     },
     "pkg": {
+      "arch": "amd64",
       "app_version": "4.5.5",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-02T13:47:29Z",
+      "generated": "2026-02-06T00:18:39Z",
       "packages": {
         "freebsd": [
           {
@@ -1252,17 +1661,218 @@
           }
         ],
         "dotnet": [],
-        "python": [],
+        "python": [
+          {
+            "name": "Cheetah3",
+            "version": "3.2.6"
+          },
+          {
+            "name": "CherryPy",
+            "version": "18.10.0"
+          },
+          {
+            "name": "FormEncode",
+            "version": "2.1.0"
+          },
+          {
+            "name": "PyYAML",
+            "version": "6.0.3"
+          },
+          {
+            "name": "SQLObject",
+            "version": "3.11.0"
+          },
+          {
+            "name": "apprise",
+            "version": "1.8.1"
+          },
+          {
+            "name": "autocommand",
+            "version": "2.2.2"
+          },
+          {
+            "name": "babelfish",
+            "version": "0.6.1"
+          },
+          {
+            "name": "backports.tarfile",
+            "version": "1.0.0"
+          },
+          {
+            "name": "blinker",
+            "version": "1.9.0"
+          },
+          {
+            "name": "certifi",
+            "version": "2025.11.12"
+          },
+          {
+            "name": "cffi",
+            "version": "1.17.1"
+          },
+          {
+            "name": "chardet",
+            "version": "5.2.0"
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.4"
+          },
+          {
+            "name": "cheroot",
+            "version": "11.1.2"
+          },
+          {
+            "name": "click",
+            "version": "8.1.7"
+          },
+          {
+            "name": "configobj",
+            "version": "5.0.9"
+          },
+          {
+            "name": "cryptography",
+            "version": "45.0.7"
+          },
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "feedparser",
+            "version": "6.0.12"
+          },
+          {
+            "name": "gntp",
+            "version": "1.0.3"
+          },
+          {
+            "name": "guessit",
+            "version": "3.8.0"
+          },
+          {
+            "name": "idna",
+            "version": "3.11"
+          },
+          {
+            "name": "importlib-resources",
+            "version": "6.5.2"
+          },
+          {
+            "name": "jaraco.collections",
+            "version": "5.1.0"
+          },
+          {
+            "name": "jaraco.context",
+            "version": "5.3.0"
+          },
+          {
+            "name": "jaraco.functools",
+            "version": "4.4.0"
+          },
+          {
+            "name": "jaraco.text",
+            "version": "4.0.0"
+          },
+          {
+            "name": "markdown",
+            "version": "3.10"
+          },
+          {
+            "name": "more-itertools",
+            "version": "10.6.0"
+          },
+          {
+            "name": "oauthlib",
+            "version": "3.3.1"
+          },
+          {
+            "name": "paho-mqtt",
+            "version": "2.1.0"
+          },
+          {
+            "name": "portend",
+            "version": "2.5"
+          },
+          {
+            "name": "puremagic",
+            "version": "1.24"
+          },
+          {
+            "name": "pybonjour",
+            "version": "1.1.1"
+          },
+          {
+            "name": "pycparser",
+            "version": "2.23"
+          },
+          {
+            "name": "pyjwt",
+            "version": "2.10.1"
+          },
+          {
+            "name": "pysocks",
+            "version": "1.7.1"
+          },
+          {
+            "name": "python-dateutil",
+            "version": "2.9.0"
+          },
+          {
+            "name": "rarfile",
+            "version": "4.1"
+          },
+          {
+            "name": "rebulk",
+            "version": "3.2.0"
+          },
+          {
+            "name": "requests",
+            "version": "2.32.5"
+          },
+          {
+            "name": "requests-oauthlib",
+            "version": "2.0.0"
+          },
+          {
+            "name": "sabctools",
+            "version": "8.2.6"
+          },
+          {
+            "name": "sgmllib3k",
+            "version": "1.0.0"
+          },
+          {
+            "name": "six",
+            "version": "1.17.0"
+          },
+          {
+            "name": "sqlite3",
+            "version": "3.11.14"
+          },
+          {
+            "name": "tempora",
+            "version": "5.8.1"
+          },
+          {
+            "name": "urllib3",
+            "version": "2.6.2"
+          },
+          {
+            "name": "zc.lockfile",
+            "version": "3.0.post1"
+          }
+        ],
         "node": [],
         "go": []
       },
       "summary": {
         "freebsd": 100,
         "dotnet": 0,
-        "python": 0,
+        "python": 50,
         "node": 0,
         "go": 0,
-        "total": 100
+        "total": 150
       }
     }
   }
