@@ -4,13 +4,14 @@ x-daemonless:
   title: "SABnzbd"
   icon: ":material-download-network:"
   category: "Downloaders"
-  description: "SABnzbd Usenet downloader on FreeBSD."
+  description: "Free and easy binary newsreader that automates the downloading and processing of Usenet content."
   upstream_url: "https://github.com/sabnzbd/sabnzbd"
   web_url: "https://sabnzbd.org/"
   freshports_url: "https://www.freshports.org/news/sabnzbd/"
   user: "bsd"
   mlock: false
-  
+  appjail: true
+
   docs:
     env:
       PUID: "User ID for the application process"

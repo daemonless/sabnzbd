@@ -12,7 +12,7 @@ ARG PKG_NAME=sabnzbd
 
 # --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="SABnzbd" \
-      org.opencontainers.image.description="SABnzbd Usenet downloader on FreeBSD." \
+      org.opencontainers.image.description="Free and easy binary newsreader that automates the downloading and processing of Usenet content." \
       org.opencontainers.image.source="https://github.com/daemonless/sabnzbd" \
       org.opencontainers.image.url="https://sabnzbd.org/" \
       org.opencontainers.image.documentation="https://sabnzbd.org/wiki/" \

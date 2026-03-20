@@ -5,15 +5,29 @@ Source: dbuild templates
 
 # SABnzbd
 
-SABnzbd Usenet downloader on FreeBSD.
+[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/sabnzbd/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/sabnzbd/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/daemonless/sabnzbd?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/sabnzbd/commits)
+
+Free and easy binary newsreader that automates the downloading and processing of Usenet content.
 
 | | |
 |---|---|
 | **Port** | 8080 |
 | **Registry** | `ghcr.io/daemonless/sabnzbd` |
-| **Docs** | [daemonless.io/images/sabnzbd](https://daemonless.io/images/sabnzbd/) |
 | **Source** | [https://github.com/sabnzbd/sabnzbd](https://github.com/sabnzbd/sabnzbd) |
 | **Website** | [https://sabnzbd.org/](https://sabnzbd.org/) |
+
+## Version Tags
+
+| Tag | Description | Best For |
+| :--- | :--- | :--- |
+| `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
+| `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
+
+## Prerequisites
+
+Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
 
@@ -29,11 +43,58 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - /path/to/containers/sabnzbd:/config
-      - /path/to/downloads:/downloads
+      - "/path/to/containers/sabnzbd:/config"
+      - "/path/to/downloads:/downloads"
     ports:
       - 8080:8080
     restart: unless-stopped
+```
+
+### AppJail Director
+
+**.env**:
+
+```
+DIRECTOR_PROJECT=sabnzbd
+PUID=1000
+PGID=1000
+TZ=UTC
+```
+
+**appjail-director.yml**:
+
+```yaml
+options:
+  - virtualnet: ':<random> default'
+  - nat:
+services:
+  sabnzbd:
+    name: sabnzbd
+    options:
+      - container: 'boot args:--pull'
+    oci:
+      user: root
+      environment:
+        - PUID: !ENV '${PUID}'
+        - PGID: !ENV '${PGID}'
+        - TZ: !ENV '${TZ}'
+    volumes:
+      - sabnzbd: /config
+      - downloads: /downloads
+volumes:
+  sabnzbd:
+    device: '/path/to/containers/sabnzbd'
+  downloads:
+    device: 'downloads'
+```
+
+**Makejail**:
+
+```
+ARG tag=latest
+
+OPTION overwrite=force
+OPTION from=ghcr.io/daemonless/sabnzbd:${tag}
 ```
 
 ### Podman CLI
@@ -41,14 +102,13 @@ services:
 ```bash
 podman run -d --name sabnzbd \
   -p 8080:8080 \
-  -e PUID=@PUID@ \
-  -e PGID=@PGID@ \
-  -e TZ=@TZ@ \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
   -v /path/to/containers/sabnzbd:/config \
   -v /path/to/downloads:/downloads \
   ghcr.io/daemonless/sabnzbd:latest
 ```
-Access at: `http://localhost:8080`
 
 ### Ansible
 
@@ -60,9 +120,9 @@ Access at: `http://localhost:8080`
     state: started
     restart_policy: always
     env:
-      PUID: "@PUID@"
-      PGID: "@PGID@"
-      TZ: "@TZ@"
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "UTC"
     ports:
       - "8080:8080"
     volumes:
@@ -70,7 +130,10 @@ Access at: `http://localhost:8080`
       - "/path/to/downloads:/downloads"
 ```
 
-## Configuration
+Access at: `http://localhost:8080`
+
+## Parameters
+
 ### Environment Variables
 
 | Variable | Default | Description |
@@ -78,20 +141,24 @@ Access at: `http://localhost:8080`
 | `PUID` | `1000` | User ID for the application process |
 | `PGID` | `1000` | Group ID for the application process |
 | `TZ` | `UTC` | Timezone for the container |
+
 ### Volumes
 
 | Path | Description |
 |------|-------------|
 | `/config` | Configuration directory |
 | `/downloads` | Download directory |
+
 ### Ports
 
 | Port | Protocol | Description |
 |------|----------|-------------|
 | `8080` | TCP | Web UI |
 
-## Notes
+**Architectures:** amd64
+**User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
+**Base:** FreeBSD 15.0
 
-- **Architectures:** amd64
-- **User:** `bsd` (UID/GID set via PUID/PGID)
-- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
+---
+
+Need help? Join our [Discord](https://discord.gg/Kb9tkhecZT) community.
