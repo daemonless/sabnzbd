@@ -1,12 +1,12 @@
 {
   "image": "sabnzbd",
-  "generated": "2026-03-20T10:48:24Z",
+  "generated": "2026-03-28T16:52:26Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "4.5.5",
       "source": "upstream",
-      "generated": "2026-03-20T10:48:08Z",
+      "generated": "2026-03-28T16:34:41Z",
       "packages": {
         "freebsd": [
           {
@@ -637,7 +637,7 @@
       "arch": "amd64",
       "app_version": "4.5.5",
       "source": "pkg",
-      "generated": "2026-03-20T10:48:03Z",
+      "generated": "2026-03-28T16:52:15Z",
       "packages": {
         "freebsd": [
           {
@@ -761,6 +761,10 @@
             "version": "15.0"
           },
           {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
+          },
+          {
             "name": "execline",
             "version": "2.9.8.1"
           },
@@ -866,7 +870,7 @@
           },
           {
             "name": "py311-cryptography",
-            "version": "46.0.5,1"
+            "version": "46.0.5_1,1"
           },
           {
             "name": "py311-feedparser",
@@ -1304,7 +1308,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 106,
+        "freebsd": 107,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -1313,14 +1317,14 @@
         "python": 57,
         "ruby": 0,
         "rust": 0,
-        "total": 163
+        "total": 164
       }
     },
     "pkg": {
       "arch": "amd64",
       "app_version": "4.5.5",
       "source": "pkg",
-      "generated": "2026-03-20T10:47:44Z",
+      "generated": "2026-03-28T16:41:42Z",
       "packages": {
         "freebsd": [
           {
@@ -1442,6 +1446,10 @@
           {
             "name": "FreeBSD-zoneinfo",
             "version": "15.0"
+          },
+          {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
           },
           {
             "name": "execline",
@@ -1931,7 +1939,7 @@
         "rust": []
       },
       "summary": {
-        "freebsd": 99,
+        "freebsd": 100,
         "dotnet": 0,
         "go": 0,
         "java": 0,
@@ -1940,7 +1948,7 @@
         "python": 50,
         "ruby": 0,
         "rust": 0,
-        "total": 149
+        "total": 150
       }
     }
   }
