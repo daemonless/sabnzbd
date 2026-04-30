@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-16T18:35:39Z",
+  "generated": "2026-04-30T07:08:11Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-04-16T18:33:11Z",
+      "generated": "2026-04-30T07:06:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -83,11 +83,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -99,7 +99,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -235,7 +235,7 @@
           },
           {
             "name": "py311-cryptography",
-            "version": "46.0.5_1,1"
+            "version": "46.0.7,1"
           },
           {
             "name": "py311-feedparser",
@@ -347,7 +347,7 @@
           },
           {
             "name": "py311-requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "py311-requests-oauthlib",
@@ -505,7 +505,7 @@
           },
           {
             "name": "cryptography",
-            "version": "46.0.5"
+            "version": "46.0.7"
           },
           {
             "name": "example",
@@ -613,7 +613,7 @@
           },
           {
             "name": "requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "requests-oauthlib",
@@ -688,7 +688,7 @@
     "pkg": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-04-16T18:34:06Z",
+      "generated": "2026-04-30T07:04:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -766,11 +766,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -782,7 +782,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -922,7 +922,7 @@
           },
           {
             "name": "py311-cryptography",
-            "version": "46.0.5_1,1"
+            "version": "46.0.7,1"
           },
           {
             "name": "py311-feedparser",
@@ -1034,7 +1034,7 @@
           },
           {
             "name": "py311-requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "py311-requests-oauthlib",
@@ -1192,7 +1192,7 @@
           },
           {
             "name": "cryptography",
-            "version": "46.0.5"
+            "version": "46.0.7"
           },
           {
             "name": "example",
@@ -1300,7 +1300,7 @@
           },
           {
             "name": "requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "requests-oauthlib",
@@ -1371,7 +1371,7 @@
     "pkg-latest": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-04-16T18:34:25Z",
+      "generated": "2026-04-30T07:04:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1449,11 +1449,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -1465,7 +1465,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1545,7 +1545,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.0"
+            "version": "2.7.4"
           },
           {
             "name": "py311-annotated-doc",
@@ -1569,7 +1569,7 @@
           },
           {
             "name": "py311-certifi",
-            "version": "2026.1.4"
+            "version": "2026.4.22"
           },
           {
             "name": "py311-cffi",
@@ -1577,11 +1577,11 @@
           },
           {
             "name": "py311-chardet",
-            "version": "7.1.0,1"
+            "version": "7.4.3,1"
           },
           {
             "name": "py311-charset-normalizer",
-            "version": "3.4.4"
+            "version": "3.4.7"
           },
           {
             "name": "py311-cheetah3",
@@ -1605,7 +1605,7 @@
           },
           {
             "name": "py311-cryptography",
-            "version": "46.0.5_1,1"
+            "version": "46.0.7_1,1"
           },
           {
             "name": "py311-feedparser",
@@ -1625,7 +1625,7 @@
           },
           {
             "name": "py311-idna",
-            "version": "3.11"
+            "version": "3.13"
           },
           {
             "name": "py311-importlib-resources",
@@ -1637,7 +1637,7 @@
           },
           {
             "name": "py311-jaraco.context",
-            "version": "6.1.0"
+            "version": "6.1.2"
           },
           {
             "name": "py311-jaraco.functools",
@@ -1693,7 +1693,7 @@
           },
           {
             "name": "py311-pyjwt",
-            "version": "2.11.0"
+            "version": "2.12.1"
           },
           {
             "name": "py311-pysocks",
@@ -1717,7 +1717,7 @@
           },
           {
             "name": "py311-requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "py311-requests-oauthlib",
@@ -1757,7 +1757,7 @@
           },
           {
             "name": "py311-typer",
-            "version": "0.24.0"
+            "version": "0.24.2"
           },
           {
             "name": "py311-typer-slim",
@@ -1843,7 +1843,7 @@
           },
           {
             "name": "certifi",
-            "version": "2026.1.4"
+            "version": "2026.4.22"
           },
           {
             "name": "cffi",
@@ -1851,11 +1851,11 @@
           },
           {
             "name": "chardet",
-            "version": "7.1.0"
+            "version": "7.4.3"
           },
           {
             "name": "charset-normalizer",
-            "version": "3.4.4"
+            "version": "3.4.7"
           },
           {
             "name": "cheetah",
@@ -1875,7 +1875,7 @@
           },
           {
             "name": "cryptography",
-            "version": "46.0.5"
+            "version": "46.0.7"
           },
           {
             "name": "example",
@@ -1895,7 +1895,7 @@
           },
           {
             "name": "idna",
-            "version": "3.11"
+            "version": "3.13"
           },
           {
             "name": "importlib-resources",
@@ -1907,7 +1907,7 @@
           },
           {
             "name": "jaraco.context",
-            "version": "6.1.0"
+            "version": "6.1.2"
           },
           {
             "name": "jaraco.functools",
@@ -1963,7 +1963,7 @@
           },
           {
             "name": "pyjwt",
-            "version": "2.11.0"
+            "version": "2.12.1"
           },
           {
             "name": "pysocks",
@@ -1983,7 +1983,7 @@
           },
           {
             "name": "requests",
-            "version": "2.32.5"
+            "version": "2.33.1"
           },
           {
             "name": "requests-oauthlib",
@@ -2019,7 +2019,7 @@
           },
           {
             "name": "typer",
-            "version": "0.24.0"
+            "version": "0.24.2"
           },
           {
             "name": "typer-slim",
