@@ -10,7 +10,6 @@ Source: dbuild templates
 
 Free and easy binary newsreader that automates the downloading and processing of Usenet content.
 
-
 | | |
 |---|---|
 | **Port** | 8080 |
@@ -130,8 +129,6 @@ podman run -d --name sabnzbd \
       - "/path/to/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
 ```
-
-Access at: `http://localhost:8080`
 
 ## Parameters
 
