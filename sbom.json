@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-30T07:08:11Z",
+  "generated": "2026-05-01T22:35:37Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
-      "app_version": "4.5.5",
+      "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-04-30T07:06:54Z",
+      "generated": "2026-05-01T22:34:04Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -358,10 +358,6 @@
             "version": "14.3.3"
           },
           {
-            "name": "py311-sabctools",
-            "version": "8.2.6"
-          },
-          {
             "name": "py311-setuptools",
             "version": "63.1.0_3"
           },
@@ -625,7 +621,7 @@
           },
           {
             "name": "sabctools",
-            "version": "8.2.6"
+            "version": "9.4.0"
           },
           {
             "name": "setuptools",
@@ -674,7 +670,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 105,
+        "freebsd": 104,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -682,13 +678,13 @@
         "python": 58,
         "ruby": 0,
         "rust": 0,
-        "total": 163
+        "total": 162
       }
     },
     "pkg": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-04-30T07:04:49Z",
+      "generated": "2026-05-01T22:34:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1371,7 +1367,7 @@
     "pkg-latest": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-04-30T07:04:35Z",
+      "generated": "2026-05-01T22:33:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1545,7 +1541,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "py311-annotated-doc",
