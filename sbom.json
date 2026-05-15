@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-14T20:42:17Z",
+  "generated": "2026-05-15T20:59:41Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
-      "app_version": "5.0.2",
+      "app_version": "5.0.3",
       "arch": "amd64",
-      "generated": "2026-05-14T20:39:06Z",
+      "generated": "2026-05-15T20:57:58Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -131,7 +131,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "execline",
@@ -395,7 +395,7 @@
           },
           {
             "name": "py311-urllib3",
-            "version": "2.6.3,1"
+            "version": "2.7.0,1"
           },
           {
             "name": "py311-zc.lockfile",
@@ -657,7 +657,7 @@
           },
           {
             "name": "urllib3",
-            "version": "2.6.3"
+            "version": "2.7.0"
           },
           {
             "name": "zc.lockfile",
@@ -684,7 +684,7 @@
     "pkg": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-05-14T20:39:18Z",
+      "generated": "2026-05-15T20:58:25Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1078,7 +1078,7 @@
           },
           {
             "name": "py311-urllib3",
-            "version": "2.6.3,1"
+            "version": "2.7.0,1"
           },
           {
             "name": "py311-zc.lockfile",
@@ -1340,7 +1340,7 @@
           },
           {
             "name": "urllib3",
-            "version": "2.6.3"
+            "version": "2.7.0"
           },
           {
             "name": "zc.lockfile",
@@ -1367,7 +1367,7 @@
     "pkg-latest": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-05-14T20:41:00Z",
+      "generated": "2026-05-15T20:58:15Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1501,7 +1501,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "indexinfo",
@@ -1649,7 +1649,7 @@
           },
           {
             "name": "py311-markdown-it-py",
-            "version": "4.0.0"
+            "version": "4.2.0"
           },
           {
             "name": "py311-mdurl",
@@ -1761,7 +1761,7 @@
           },
           {
             "name": "py311-urllib3",
-            "version": "2.6.3,1"
+            "version": "2.7.0,1"
           },
           {
             "name": "py311-zc.lockfile",
@@ -1919,7 +1919,7 @@
           },
           {
             "name": "markdown-it-py",
-            "version": "4.0.0"
+            "version": "4.2.0"
           },
           {
             "name": "mdurl",
@@ -2023,7 +2023,7 @@
           },
           {
             "name": "urllib3",
-            "version": "2.6.3"
+            "version": "2.7.0"
           },
           {
             "name": "zc.lockfile",
