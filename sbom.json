@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-15T20:59:41Z",
+  "generated": "2026-05-17T07:21:56Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
       "app_version": "5.0.3",
       "arch": "amd64",
-      "generated": "2026-05-15T20:57:58Z",
+      "generated": "2026-05-17T07:20:39Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -684,7 +684,7 @@
     "pkg": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-05-15T20:58:25Z",
+      "generated": "2026-05-17T07:18:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -810,7 +810,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "execline",
@@ -1365,9 +1365,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "4.5.5",
+      "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-05-15T20:58:15Z",
+      "generated": "2026-05-17T07:18:43Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1493,7 +1493,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.123.1"
           },
           {
             "name": "execline",
@@ -1621,7 +1621,7 @@
           },
           {
             "name": "py311-idna",
-            "version": "3.13"
+            "version": "3.15"
           },
           {
             "name": "py311-importlib-resources",
@@ -1713,7 +1713,7 @@
           },
           {
             "name": "py311-requests",
-            "version": "2.33.1"
+            "version": "2.34.2"
           },
           {
             "name": "py311-requests-oauthlib",
@@ -1725,7 +1725,7 @@
           },
           {
             "name": "py311-sabctools",
-            "version": "8.2.6"
+            "version": "9.4.0"
           },
           {
             "name": "py311-sgmllib3k",
@@ -1781,7 +1781,7 @@
           },
           {
             "name": "sabnzbd",
-            "version": "4.5.5"
+            "version": "5.0.1"
           },
           {
             "name": "skalibs",
@@ -1891,7 +1891,7 @@
           },
           {
             "name": "idna",
-            "version": "3.13"
+            "version": "3.15"
           },
           {
             "name": "importlib-resources",
@@ -1979,7 +1979,7 @@
           },
           {
             "name": "requests",
-            "version": "2.33.1"
+            "version": "2.34.2"
           },
           {
             "name": "requests-oauthlib",
@@ -1991,7 +1991,7 @@
           },
           {
             "name": "sabctools",
-            "version": "8.2.6"
+            "version": "9.4.0"
           },
           {
             "name": "sgmllib3k",
