@@ -4,7 +4,7 @@
 # Source: Containerfile.j2
 # --------------------------------------------------------------------------
 
-ARG BASE_VERSION=15
+ARG BASE_VERSION=15.1
 
 # --- Build stage: compile sabctools from source ---
 FROM ghcr.io/daemonless/base:${BASE_VERSION} AS builder

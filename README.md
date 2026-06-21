@@ -36,17 +36,17 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   sabnzbd:
-    image: ghcr.io/daemonless/sabnzbd:latest
+    image: "ghcr.io/daemonless/sabnzbd:latest"
     container_name: sabnzbd
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
     ports:
-      - 8080:8080
+      - "8080:8080"
     restart: unless-stopped
 ```
 
@@ -116,7 +116,7 @@ podman run -d --name sabnzbd \
 - name: Deploy sabnzbd
   containers.podman.podman_container:
     name: sabnzbd
-    image: ghcr.io/daemonless/sabnzbd:latest
+    image: "ghcr.io/daemonless/sabnzbd:latest"
     state: started
     restart_policy: always
     env:
@@ -129,6 +129,8 @@ podman run -d --name sabnzbd \
       - "/path/to/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
 ```
+
+Access at: `http://localhost:8080`
 
 ## Parameters
 
