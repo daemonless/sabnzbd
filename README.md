@@ -72,6 +72,7 @@ services:
     name: sabnzbd
     options:
       - container: 'boot args:--pull'
+      - expose="8080:8080 proto:tcp" \
     oci:
       user: root
       environment:
@@ -96,6 +97,7 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/sabnzbd:${tag}
 ```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -109,6 +111,24 @@ podman run -d --name sabnzbd \
   -v /path/to/downloads:/downloads \
   ghcr.io/daemonless/sabnzbd:latest
 ```
+
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="8080:8080 proto:tcp" \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -o fstab="/path/to/containers/sabnzbd /config <pseudofs>" \
+  -o fstab="/path/to/downloads /downloads <pseudofs>" \
+  ghcr.io/daemonless/sabnzbd:latest sabnzbd
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Ansible
 
