@@ -4,8 +4,8 @@ ARG BASE_VERSION=15.1
 FROM ghcr.io/daemonless/base:${BASE_VERSION} AS builder
 RUN pkg update && \
     pkg install -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev python311 py311-pip py311-setuptools && \
-    pip-3.11 install --no-cache-dir sabctools && \
-    chmod -R a+rX /usr/local/lib/python3.11/site-packages/sabctools* && \
+    pip-3.11 install --target=/tmp/sabctools-build --no-cache-dir sabctools && \
+    chmod -R a+rX /tmp/sabctools-build/sabctools* && \
     pkg remove -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev py311-pip py311-setuptools && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
@@ -58,8 +58,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Copy compiled sabctools from builder
-COPY --from=builder /usr/local/lib/python3.11/site-packages/sabctools /usr/local/lib/python3.11/site-packages/sabctools
-COPY --from=builder /usr/local/lib/python3.11/site-packages/sabctools-9.4.0.dist-info /usr/local/lib/python3.11/site-packages/sabctools-9.4.0.dist-info
+COPY --from=builder /tmp/sabctools-build/ /usr/local/lib/python3.11/site-packages/
 
 # Download and install SABnzbd from GitHub
 RUN mkdir -p /app/sabnzbd && \
