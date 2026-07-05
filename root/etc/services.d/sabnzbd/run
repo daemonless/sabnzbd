@@ -4,4 +4,4 @@
 export HOME=/config
 
 cd /app/sabnzbd
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/python3.11 SABnzbd.py --config-file /config/sabnzbd.ini --server 0.0.0.0:8080
+exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/python3 SABnzbd.py --config-file /config/sabnzbd.ini --server 0.0.0.0:8080

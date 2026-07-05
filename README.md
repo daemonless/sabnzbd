@@ -18,7 +18,6 @@ Free and easy binary newsreader that automates the downloading and processing of
 | **Website** | [https://sabnzbd.org/](https://sabnzbd.org/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
@@ -26,7 +25,6 @@ Free and easy binary newsreader that automates the downloading and processing of
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -51,10 +49,11 @@ services:
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=sabnzbd
 PUID=1000
 PGID=1000
@@ -64,6 +63,8 @@ TZ=UTC
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -72,7 +73,7 @@ services:
     name: sabnzbd
     options:
       - container: 'boot args:--pull'
-      - expose="8080:8080 proto:tcp" \
+      - expose: '8080:8080 proto:tcp' \
     oci:
       user: root
       environment:
@@ -92,6 +93,8 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force

@@ -9,10 +9,10 @@ ARG BASE_VERSION=15.1
 # --- Build stage: compile sabctools from source ---
 FROM ghcr.io/daemonless/base:${BASE_VERSION} AS builder
 RUN pkg update && \
-    pkg install -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev python311 py311-pip py311-setuptools && \
-    pip-3.11 install --target=/tmp/sabctools-build --no-cache-dir sabctools && \
+    pkg install -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev python3 py311-pip py311-setuptools py311-wheel && \
+    pip install --break-system-packages --target=/tmp/sabctools-build --no-cache-dir sabctools && \
     chmod -R a+rX /tmp/sabctools-build/sabctools* && \
-    pkg remove -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev py311-pip py311-setuptools && \
+    pkg remove -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev py311-pip py311-setuptools py311-wheel && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
@@ -20,7 +20,7 @@ RUN pkg update && \
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-ARG PACKAGES="python311 py311-pip py311-setuptools py311-sqlite3 py311-cryptography py311-feedparser py311-configobj py311-cherrypy py311-portend py311-chardet py311-pysocks py311-guessit py311-puremagic py311-rarfile py311-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
+ARG PACKAGES="python3 py311-pip py311-setuptools py311-wheel py311-sqlite3 py311-cryptography py311-feedparser py311-configobj py311-cherrypy py311-portend py311-chardet py311-pysocks py311-guessit py311-puremagic py311-rarfile py311-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
 ARG UPSTREAM_URL="https://api.github.com/repos/sabnzbd/sabnzbd/releases/latest"
 ARG UPSTREAM_JQ=".tag_name"
 ARG HEALTHCHECK_ENDPOINT="http://localhost:8080/api?mode=version"
