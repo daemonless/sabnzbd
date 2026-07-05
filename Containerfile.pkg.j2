@@ -28,7 +28,7 @@ LABEL org.opencontainers.image.title="{{ title }}" \
 
 # Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y ${PKG_NAME} && \
+    pkg install -y ${PKG_NAME} python3 && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
