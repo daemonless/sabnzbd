@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-21T22:11:05Z",
+  "generated": "2026-07-05T10:32:14Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
       "app_version": "5.0.4",
       "arch": "amd64",
-      "generated": "2026-06-21T22:09:47Z",
+      "generated": "2026-07-05T10:30:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -31,7 +31,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -103,7 +103,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -115,7 +115,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -123,7 +123,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -310,6 +310,10 @@
             "version": "3.3.1"
           },
           {
+            "name": "py311-packaging",
+            "version": "26.0"
+          },
+          {
             "name": "py311-paho-mqtt",
             "version": "2.1.0"
           },
@@ -410,12 +414,20 @@
             "version": "2.7.0,1"
           },
           {
+            "name": "py311-wheel",
+            "version": "0.46.3_1"
+          },
+          {
             "name": "py311-zc.lockfile",
             "version": "3.0.post1_1"
           },
           {
+            "name": "python3",
+            "version": "3_4"
+          },
+          {
             "name": "python311",
-            "version": "3.11.15_3"
+            "version": "3.11.15_4"
           },
           {
             "name": "readline",
@@ -576,6 +588,10 @@
             "version": "3.3.1"
           },
           {
+            "name": "packaging",
+            "version": "26.0"
+          },
+          {
             "name": "paho-mqtt",
             "version": "2.1.0"
           },
@@ -633,7 +649,7 @@
           },
           {
             "name": "sabctools",
-            "version": "9.4.1"
+            "version": "9.6.0"
           },
           {
             "name": "setuptools",
@@ -672,6 +688,10 @@
             "version": "2.7.0"
           },
           {
+            "name": "wheel",
+            "version": "0.46.3"
+          },
+          {
             "name": "zc.lockfile",
             "version": "3.0.post1"
           }
@@ -682,21 +702,21 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 107,
+        "freebsd": 110,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 58,
+        "python": 60,
         "ruby": 0,
         "rust": 0,
-        "total": 165
+        "total": 170
       }
     },
     "pkg": {
       "app_version": "4.5.5",
       "arch": "amd64",
-      "generated": "2026-06-21T22:04:29Z",
+      "generated": "2026-07-05T10:29:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -722,7 +742,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -794,7 +814,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -806,7 +826,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -814,7 +834,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1109,8 +1129,12 @@
             "version": "3.0.post1_1"
           },
           {
+            "name": "python3",
+            "version": "3_4"
+          },
+          {
             "name": "python311",
-            "version": "3.11.15_3"
+            "version": "3.11.15_4"
           },
           {
             "name": "readline",
@@ -1377,7 +1401,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 109,
+        "freebsd": 110,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1385,19 +1409,19 @@
         "python": 57,
         "ruby": 0,
         "rust": 0,
-        "total": 166
+        "total": 167
       }
     },
     "pkg-latest": {
       "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-06-21T22:05:44Z",
+      "generated": "2026-07-05T10:31:03Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
           {
             "name": "7-zip",
-            "version": "26.01"
+            "version": "26.02"
           },
           {
             "name": "FreeBSD-audit-lib",
@@ -1417,7 +1441,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1485,7 +1509,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1497,7 +1521,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1505,7 +1529,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1525,7 +1549,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.1"
+            "version": "2.8.2"
           },
           {
             "name": "gettext-runtime",
@@ -1537,7 +1561,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libedit",
@@ -1545,7 +1569,7 @@
           },
           {
             "name": "libffi",
-            "version": "3.5.2"
+            "version": "3.6.0"
           },
           {
             "name": "libyaml",
@@ -1572,232 +1596,232 @@
             "version": "2.7.5"
           },
           {
-            "name": "py311-annotated-doc",
+            "name": "py312-annotated-doc",
             "version": "0.0.4"
           },
           {
-            "name": "py311-apprise",
+            "name": "py312-apprise",
             "version": "1.11.0"
           },
           {
-            "name": "py311-babelfish",
+            "name": "py312-babelfish",
             "version": "0.6.1"
           },
           {
-            "name": "py311-backports.tarfile",
-            "version": "1.0.0"
-          },
-          {
-            "name": "py311-blinker",
+            "name": "py312-blinker",
             "version": "1.9.0"
           },
           {
-            "name": "py311-certifi",
+            "name": "py312-certifi",
             "version": "2026.5.20"
           },
           {
-            "name": "py311-cffi",
+            "name": "py312-cffi",
             "version": "2.0.0"
           },
           {
-            "name": "py311-chardet",
+            "name": "py312-chardet",
             "version": "7.4.3,1"
           },
           {
-            "name": "py311-charset-normalizer",
+            "name": "py312-charset-normalizer",
             "version": "3.4.7"
           },
           {
-            "name": "py311-cheetah3",
+            "name": "py312-cheetah3",
             "version": "3.4.0.p5"
           },
           {
-            "name": "py311-cheroot",
+            "name": "py312-cheroot",
             "version": "11.1.2"
           },
           {
-            "name": "py311-cherrypy",
+            "name": "py312-cherrypy",
             "version": "18.10.0"
           },
           {
-            "name": "py311-click",
+            "name": "py312-click",
             "version": "8.3.1"
           },
           {
-            "name": "py311-configobj",
+            "name": "py312-configobj",
             "version": "5.0.9"
           },
           {
-            "name": "py311-cryptography",
+            "name": "py312-cryptography",
             "version": "48.0.0_1,1"
           },
           {
-            "name": "py311-feedparser",
+            "name": "py312-feedparser",
             "version": "6.0.12"
           },
           {
-            "name": "py311-formencode",
+            "name": "py312-formencode",
             "version": "2.1.1"
           },
           {
-            "name": "py311-gntp",
-            "version": "1.0.3_1"
+            "name": "py312-gntp",
+            "version": "1.0.3_2"
           },
           {
-            "name": "py311-guessit",
+            "name": "py312-guessit",
             "version": "3.8.0_1"
           },
           {
-            "name": "py311-idna",
+            "name": "py312-idna",
             "version": "3.16"
           },
           {
-            "name": "py311-importlib-resources",
+            "name": "py312-importlib-resources",
             "version": "6.5.2"
           },
           {
-            "name": "py311-jaraco.collections",
+            "name": "py312-jaraco.collections",
             "version": "5.2.1"
           },
           {
-            "name": "py311-jaraco.context",
+            "name": "py312-jaraco.context",
             "version": "6.1.2"
           },
           {
-            "name": "py311-jaraco.functools",
+            "name": "py312-jaraco.functools",
             "version": "4.5.0"
           },
           {
-            "name": "py311-jaraco.text",
+            "name": "py312-jaraco.text",
             "version": "4.2.0"
           },
           {
-            "name": "py311-markdown",
+            "name": "py312-markdown",
             "version": "3.10.2"
           },
           {
-            "name": "py311-markdown-it-py",
+            "name": "py312-markdown-it-py",
             "version": "4.2.0"
           },
           {
-            "name": "py311-mdurl",
+            "name": "py312-mdurl",
             "version": "0.1.2_2"
           },
           {
-            "name": "py311-more-itertools",
+            "name": "py312-more-itertools",
             "version": "11.1.0"
           },
           {
-            "name": "py311-oauthlib",
+            "name": "py312-oauthlib",
             "version": "3.3.1"
           },
           {
-            "name": "py311-paho-mqtt",
+            "name": "py312-paho-mqtt",
             "version": "2.1.0"
           },
           {
-            "name": "py311-portend",
+            "name": "py312-portend",
             "version": "2.5_2"
           },
           {
-            "name": "py311-puremagic",
+            "name": "py312-puremagic",
             "version": "1.30_1"
           },
           {
-            "name": "py311-pybonjour",
+            "name": "py312-pybonjour",
             "version": "1.1.1_1"
           },
           {
-            "name": "py311-pycparser",
+            "name": "py312-pycparser",
             "version": "2.23"
           },
           {
-            "name": "py311-pygments",
+            "name": "py312-pygments",
             "version": "2.20.0"
           },
           {
-            "name": "py311-pyjwt",
+            "name": "py312-pyjwt",
             "version": "2.13.0"
           },
           {
-            "name": "py311-pysocks",
+            "name": "py312-pysocks",
             "version": "1.7.1_1"
           },
           {
-            "name": "py311-python-dateutil",
+            "name": "py312-python-dateutil",
             "version": "2.9.0"
           },
           {
-            "name": "py311-pyyaml",
+            "name": "py312-pyyaml",
             "version": "6.0.3"
           },
           {
-            "name": "py311-rarfile",
+            "name": "py312-rarfile",
             "version": "4.1_1"
           },
           {
-            "name": "py311-rebulk",
+            "name": "py312-rebulk",
             "version": "3.2.0_1"
           },
           {
-            "name": "py311-requests",
+            "name": "py312-requests",
             "version": "2.34.2"
           },
           {
-            "name": "py311-requests-oauthlib",
+            "name": "py312-requests-oauthlib",
             "version": "2.0.0"
           },
           {
-            "name": "py311-rich",
+            "name": "py312-rich",
             "version": "15.0.0"
           },
           {
-            "name": "py311-sabctools",
+            "name": "py312-sabctools",
             "version": "9.4.0"
           },
           {
-            "name": "py311-sgmllib3k",
+            "name": "py312-sgmllib3k",
             "version": "1.0.0_1"
           },
           {
-            "name": "py311-shellingham",
+            "name": "py312-shellingham",
             "version": "1.5.4_1"
           },
           {
-            "name": "py311-six",
+            "name": "py312-six",
             "version": "1.17.0"
           },
           {
-            "name": "py311-sqlite3",
-            "version": "3.11.15_10"
+            "name": "py312-sqlite3",
+            "version": "3.12.13_10"
           },
           {
-            "name": "py311-sqlobject",
+            "name": "py312-sqlobject",
             "version": "3.11.0_1"
           },
           {
-            "name": "py311-tempora",
+            "name": "py312-tempora",
             "version": "5.9.0"
           },
           {
-            "name": "py311-typer",
-            "version": "0.25.1_1"
+            "name": "py312-typer",
+            "version": "0.26.0"
           },
           {
-            "name": "py311-typer-slim",
+            "name": "py312-typer-slim",
             "version": "0.24.0"
           },
           {
-            "name": "py311-urllib3",
+            "name": "py312-urllib3",
             "version": "2.7.0,1"
           },
           {
-            "name": "py311-zc.lockfile",
+            "name": "py312-zc.lockfile",
             "version": "3.0.post1_1"
           },
           {
-            "name": "python311",
-            "version": "3.11.15_3"
+            "name": "python3",
+            "version": "3_4"
+          },
+          {
+            "name": "python312",
+            "version": "3.12.13_3"
           },
           {
             "name": "readline",
@@ -1856,10 +1880,6 @@
           {
             "name": "babelfish",
             "version": "0.6.1"
-          },
-          {
-            "name": "backports.tarfile",
-            "version": "1.0.0"
           },
           {
             "name": "blinker",
@@ -2035,7 +2055,7 @@
           },
           {
             "name": "sqlite3",
-            "version": "3.11.15"
+            "version": "3.12.13"
           },
           {
             "name": "tempora",
@@ -2043,7 +2063,7 @@
           },
           {
             "name": "typer",
-            "version": "0.25.1"
+            "version": "0.26.0"
           },
           {
             "name": "typer-slim",
@@ -2069,10 +2089,10 @@
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 57,
+        "python": 56,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 163
       }
     }
   }
