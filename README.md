@@ -73,7 +73,7 @@ services:
     name: sabnzbd
     options:
       - container: 'boot args:--pull'
-      - expose: '8080:8080 proto:tcp' \
+      - expose: '8080:8080 proto:tcp'
     oci:
       user: root
       environment:
