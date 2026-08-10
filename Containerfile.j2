@@ -1,5 +1,23 @@
 ARG BASE_VERSION=15.1
 
+# --- Build stage: build py-hachoir from our own ports overlay ---
+# Not yet published to the FreeBSD pkg repos (daemonless/freebsd-ports devel/py-hachoir),
+# so it's built from source here rather than pkg-installed.
+FROM ghcr.io/daemonless/base:${BASE_VERSION} AS hachoir-builder
+RUN pkg update && \
+    pkg install -y FreeBSD-bmake FreeBSD-clibs-dev python3 py312-setuptools git && \
+    fetch -qo /tmp/ports.tar.zst "https://download.freebsd.org/ports/ports/ports.tar.zst" && \
+    mkdir -p /usr/ports/devel && \
+    tar -xf /tmp/ports.tar.zst -C /usr/ports --strip-components=1 \
+        ports/Mk ports/Templates ports/Keywords ports/lang/python312 && \
+    rm /tmp/ports.tar.zst && \
+    git clone --depth=1 https://github.com/daemonless/freebsd-ports.git /tmp/freebsd-ports && \
+    cp -r /tmp/freebsd-ports/devel/py-hachoir /usr/ports/devel/ && \
+    rm -rf /tmp/freebsd-ports
+WORKDIR /usr/ports/devel/py-hachoir
+RUN make BATCH=yes install clean
+RUN mkdir -p /tmp/packages && pkg create -o /tmp/packages/ py312-hachoir
+
 # --- Build stage: compile sabctools from source ---
 # SABnzbd requires the exact sabctools version pinned in its release's
 # requirements.txt -- anything newer and it boots with downloading
@@ -65,6 +83,16 @@ RUN pkg update && \
 
 # Copy compiled sabctools from builder
 COPY --from=builder /tmp/sabctools-build/ /usr/local/lib/python3.12/site-packages/
+
+# Install hachoir (devel/py-hachoir, not yet published to FreeBSD pkg repos)
+COPY --from=hachoir-builder /tmp/packages/py312-hachoir-*.pkg /tmp/
+RUN pkg add -f /tmp/py312-hachoir-*.pkg && \
+    rm /tmp/py312-hachoir-*.pkg && \
+    chmod -R a+rX /usr/local/lib/python3.12/site-packages/hachoir*
+
+# py312-rarfile (pkg) is stuck at 4.1 -- SABnzbd needs rarfile>=4.3 (rar5_s2k).
+RUN pip install --break-system-packages --no-cache-dir "rarfile==4.3" && \
+    chmod -R a+rX /usr/local/lib/python3.12/site-packages/rarfile*
 
 # Download and install SABnzbd from GitHub
 RUN mkdir -p /app/sabnzbd && \
