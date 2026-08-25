@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-18T20:35:21Z",
+  "generated": "2026-08-25T15:57:08Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
-      "app_version": "5.1.1",
+      "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-08-18T20:34:22Z",
+      "generated": "2026-08-25T15:56:07Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -247,7 +247,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -684,7 +684,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.13_10"
+            "version": "3.12.14_10"
           },
           {
             "licenses": [
@@ -744,7 +744,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_4"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -1050,7 +1050,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.13"
+            "version": "3.12.14"
           },
           {
             "name": "tempora",
@@ -1103,7 +1103,7 @@
     "pkg": {
       "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-08-18T20:34:02Z",
+      "generated": "2026-08-25T15:53:54Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1345,7 +1345,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -1775,7 +1775,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.13_10"
+            "version": "3.12.14_10"
           },
           {
             "licenses": [
@@ -1828,7 +1828,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_4"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -2128,7 +2128,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.13"
+            "version": "3.12.14"
           },
           {
             "name": "tempora",
@@ -2176,7 +2176,7 @@
     "pkg-latest": {
       "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-08-18T20:33:02Z",
+      "generated": "2026-08-25T15:53:58Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2418,7 +2418,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.126.1"
           },
           {
             "licenses": [
@@ -2432,7 +2432,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.2"
+            "version": "2.8.3"
           },
           {
             "licenses": [
@@ -2468,7 +2468,7 @@
               "MIT"
             ],
             "name": "libffi",
-            "version": "3.7.1"
+            "version": "3.8.0"
           },
           {
             "licenses": [
@@ -2483,7 +2483,7 @@
               "APACHE20"
             ],
             "name": "mDNSResponder",
-            "version": "2881.100.56.0.1"
+            "version": "2881.120.11"
           },
           {
             "licenses": [
@@ -2518,7 +2518,7 @@
               "MIT"
             ],
             "name": "py312-annotated-doc",
-            "version": "0.0.4"
+            "version": "0.0.5"
           },
           {
             "licenses": [
@@ -2666,14 +2666,14 @@
               "MIT"
             ],
             "name": "py312-jaraco.functools",
-            "version": "4.5.0"
+            "version": "4.6.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-jaraco.text",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -2750,7 +2750,7 @@
               "BSD2CLAUSE"
             ],
             "name": "py312-pygments",
-            "version": "2.20.0"
+            "version": "2.21.0"
           },
           {
             "licenses": [
@@ -2859,10 +2859,10 @@
           },
           {
             "licenses": [
-              "MIT"
+              "APACHE20"
             ],
             "name": "py312-tempora",
-            "version": "5.9.0"
+            "version": "5.10.0"
           },
           {
             "licenses": [
@@ -2877,6 +2877,13 @@
             ],
             "name": "py312-typer-slim",
             "version": "0.24.0"
+          },
+          {
+            "licenses": [
+              "PSFL"
+            ],
+            "name": "py312-typing-extensions",
+            "version": "4.16.0"
           },
           {
             "licenses": [
@@ -2945,7 +2952,7 @@
               "UNRAR"
             ],
             "name": "unrar",
-            "version": "7.23,6"
+            "version": "7.23_1,6"
           }
         ],
         "go": [],
@@ -2976,7 +2983,7 @@
           {
             "name": "annotated-doc",
             "purl": "",
-            "version": "0.0.4"
+            "version": "0.0.5"
           },
           {
             "name": "apprise",
@@ -3076,12 +3083,12 @@
           {
             "name": "jaraco.functools",
             "purl": "",
-            "version": "4.5.0"
+            "version": "4.6.0"
           },
           {
             "name": "jaraco.text",
             "purl": "",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "name": "markdown",
@@ -3136,7 +3143,7 @@
           {
             "name": "pygments",
             "purl": "",
-            "version": "2.20.0"
+            "version": "2.21.0"
           },
           {
             "name": "pyjwt",
@@ -3206,7 +3213,7 @@
           {
             "name": "tempora",
             "purl": "",
-            "version": "5.9.0"
+            "version": "5.10.0"
           },
           {
             "name": "typer",
@@ -3217,6 +3224,11 @@
             "name": "typer-slim",
             "purl": "",
             "version": "0.24.0"
+          },
+          {
+            "name": "typing_extensions",
+            "purl": "",
+            "version": "4.16.0"
           },
           {
             "name": "urllib3",
@@ -3235,15 +3247,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 109,
+        "freebsd": 110,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 55,
+        "python": 56,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 166
       }
     }
   }
