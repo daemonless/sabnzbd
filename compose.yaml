@@ -28,7 +28,7 @@ services:
     image: ghcr.io/daemonless/sabnzbd:latest
     container_name: sabnzbd
     restart: unless-stopped
-    
+
     environment:
       - PUID=1000
       - PGID=1000
