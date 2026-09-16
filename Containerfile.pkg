@@ -31,11 +31,12 @@ RUN pkg update && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
-# devel/py-rarfile is 4.1 in ports, but SABnzbd 5.1.x requires 4.3 and calls
-# rarfile.rar5_s2k, which 4.1 lacks -- the service crash-loops on import with
-# AttributeError. Install what upstream requires over the port's copy.
+# devel/py-rarfile is 4.1; SABnzbd 5.1.x needs 4.3 for rarfile.rar5_s2k.
+# chmod: ocijail 0.6.0 leaks umask(077), so pip installs land unreadable by bsd.
 RUN python3.12 -m pip install --break-system-packages --no-cache-dir 'rarfile>=4.3' && \
-    python3.12 -c "import rarfile; assert hasattr(rarfile, 'rar5_s2k'); print('rarfile', rarfile.__version__)"
+    chmod -R a+rX /usr/local/lib/python3.12/site-packages && \
+    python3.12 -c "import rarfile; assert hasattr(rarfile, 'rar5_s2k'); print('rarfile', rarfile.__version__)" && \
+    ! find /usr/local/lib/python3.12/site-packages -type f ! -perm -o+r | grep -q .
 
 # Override package_info to show container update instructions
 RUN SABNZBD_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
