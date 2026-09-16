@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-08T15:49:33Z",
+  "generated": "2026-09-16T21:29:24Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
       "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-09-08T15:48:36Z",
+      "generated": "2026-09-16T21:28:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -247,7 +247,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.128"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -1103,7 +1103,7 @@
     "pkg": {
       "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-09-08T15:46:55Z",
+      "generated": "2026-09-16T21:28:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1345,7 +1345,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -1643,6 +1643,13 @@
             ],
             "name": "py312-paho-mqtt",
             "version": "2.1.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pip",
+            "version": "23.3.2_4"
           },
           {
             "licenses": [
@@ -2041,6 +2048,11 @@
             "version": "2.1.0"
           },
           {
+            "name": "pip",
+            "purl": "",
+            "version": "23.3.2"
+          },
+          {
             "name": "portend",
             "purl": "",
             "version": "2.5"
@@ -2083,7 +2095,7 @@
           {
             "name": "rarfile",
             "purl": "",
-            "version": "4.1"
+            "version": "4.5"
           },
           {
             "name": "rebulk",
@@ -2162,21 +2174,21 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 109,
+        "freebsd": 110,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 55,
+        "python": 56,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 166
       }
     },
     "pkg-latest": {
-      "app_version": "5.0.1",
+      "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-09-08T15:47:15Z",
+      "generated": "2026-09-16T21:27:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2187,7 +2199,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.02"
+            "version": "26.03"
           },
           {
             "licenses": [
@@ -2418,7 +2430,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -2432,7 +2444,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.3"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -2610,7 +2622,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.0,1"
+            "version": "50.0.1,1"
           },
           {
             "licenses": [
@@ -2639,6 +2651,13 @@
             ],
             "name": "py312-guessit",
             "version": "4.4.0"
+          },
+          {
+            "licenses": [
+              "GPLv2"
+            ],
+            "name": "py312-hachoir",
+            "version": "3.4.0"
           },
           {
             "licenses": [
@@ -2721,6 +2740,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-pip",
+            "version": "23.3.2_4"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-portend",
             "version": "2.5_2"
           },
@@ -2757,7 +2783,7 @@
               "MIT"
             ],
             "name": "py312-pyjwt",
-            "version": "2.13.0"
+            "version": "2.14.0"
           },
           {
             "licenses": [
@@ -2820,7 +2846,7 @@
               "GPLv2+"
             ],
             "name": "py312-sabctools",
-            "version": "9.4.0"
+            "version": "9.6.3"
           },
           {
             "licenses": [
@@ -2869,7 +2895,7 @@
               "MIT"
             ],
             "name": "py312-typer",
-            "version": "0.27.1"
+            "version": "0.27.2"
           },
           {
             "licenses": [
@@ -2931,7 +2957,7 @@
               "WTFPL"
             ],
             "name": "sabnzbd",
-            "version": "5.0.1"
+            "version": "5.1.2"
           },
           {
             "licenses": [
@@ -3038,7 +3064,7 @@
           {
             "name": "cryptography",
             "purl": "",
-            "version": "50.0.0"
+            "version": "50.0.1"
           },
           {
             "name": "example",
@@ -3059,6 +3085,11 @@
             "name": "guessit",
             "purl": "",
             "version": "4.4.0"
+          },
+          {
+            "name": "hachoir",
+            "purl": "",
+            "version": "3.4.0"
           },
           {
             "name": "idna",
@@ -3116,6 +3147,11 @@
             "version": "2.1.0"
           },
           {
+            "name": "pip",
+            "purl": "",
+            "version": "23.3.2"
+          },
+          {
             "name": "portend",
             "purl": "",
             "version": "2.5"
@@ -3143,7 +3179,7 @@
           {
             "name": "pyjwt",
             "purl": "",
-            "version": "2.13.0"
+            "version": "2.14.0"
           },
           {
             "name": "pysocks",
@@ -3163,7 +3199,7 @@
           {
             "name": "rarfile",
             "purl": "",
-            "version": "4.1"
+            "version": "4.5"
           },
           {
             "name": "rebulk",
@@ -3188,7 +3224,7 @@
           {
             "name": "sabctools",
             "purl": "",
-            "version": "9.4.0"
+            "version": "9.6.3"
           },
           {
             "name": "sgmllib3k",
@@ -3218,7 +3254,7 @@
           {
             "name": "typer",
             "purl": "",
-            "version": "0.27.1"
+            "version": "0.27.2"
           },
           {
             "name": "typer-slim",
@@ -3247,15 +3283,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 110,
+        "freebsd": 112,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 56,
+        "python": 58,
         "ruby": 0,
         "rust": 0,
-        "total": 166
+        "total": 170
       }
     }
   }
