@@ -42,7 +42,7 @@ services:
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
     volumes:
-      - "/path/to/containers/sabnzbd:/config"
+      - "/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
     ports:
       - "8080:8080"
@@ -89,7 +89,7 @@ services:
       - downloads: /downloads
 volumes:
   sabnzbd:
-    device: '/path/to/containers/sabnzbd'
+    device: '/containers/sabnzbd'
   downloads:
     device: 'downloads'
 ```
@@ -114,47 +114,6 @@ Save the files above, then run `appjail-director up`.
 >
 > To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
-### Podman CLI
-
-```bash
-podman run -d --name sabnzbd \
-  -p 8080:8080 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -v /path/to/containers/sabnzbd:/config \
-  -v /path/to/downloads:/downloads \
-  ghcr.io/daemonless/sabnzbd:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o expose="8080:8080 proto:tcp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -o fstab="/path/to/containers/sabnzbd /config <pseudofs>" \
-  -o fstab="/path/to/downloads /downloads <pseudofs>" \
-  ghcr.io/daemonless/sabnzbd:latest sabnzbd
-```
-
-Save the files above, then run `sh run.sh`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
 ### Bastille
 
 > [!WARNING]
@@ -172,43 +131,11 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - "/path/to/containers/sabnzbd:/config"
+      - "/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --volume /path/to/containers/sabnzbd /config \
-  --volume /path/to/downloads /downloads \
-  sabnzbd ghcr.io/daemonless/sabnzbd:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy sabnzbd
-  containers.podman.podman_container:
-    name: sabnzbd
-    image: "ghcr.io/daemonless/sabnzbd:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-    ports:
-      - "8080:8080"
-    volumes:
-      - "/path/to/containers/sabnzbd:/config"
-      - "/path/to/downloads:/downloads"
-```
-
-Save as `sabnzbd-deploy.yaml`, then run `ansible-playbook sabnzbd-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:8080`
 
