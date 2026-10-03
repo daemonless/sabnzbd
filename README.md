@@ -164,7 +164,7 @@ Access at: `http://localhost:8080`
 
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.1
+**Base:** FreeBSD 15
 
 ---
 

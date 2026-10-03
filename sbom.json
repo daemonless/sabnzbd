@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-02T23:51:05Z",
+  "generated": "2026-10-03T22:55:15Z",
   "image": "sabnzbd",
   "tags": {
     "latest": {
       "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-10-02T23:50:10Z",
+      "generated": "2026-10-03T22:53:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -16,7 +16,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.02"
+            "version": "26.03"
           },
           {
             "licenses": [
@@ -275,7 +275,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.2"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -311,7 +311,7 @@
               "MIT"
             ],
             "name": "libffi",
-            "version": "3.6.0"
+            "version": "3.8.0"
           },
           {
             "licenses": [
@@ -339,21 +339,21 @@
               "GPLv2"
             ],
             "name": "par2cmdline-turbo",
-            "version": "1.4.0"
+            "version": "1.5.0"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.4"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-annotated-doc",
-            "version": "0.0.4"
+            "version": "0.0.5"
           },
           {
             "licenses": [
@@ -381,28 +381,28 @@
               "MPL20"
             ],
             "name": "py312-certifi",
-            "version": "2026.6.17"
+            "version": "2026.7.22"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-cffi",
-            "version": "2.0.0"
+            "version": "2.1.1"
           },
           {
             "licenses": [
               "BSD0CLAUSE"
             ],
             "name": "py312-chardet",
-            "version": "7.4.3,1"
+            "version": "7.6.0,1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-charset-normalizer",
-            "version": "3.4.7"
+            "version": "3.5.1"
           },
           {
             "licenses": [
@@ -445,7 +445,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "48.0.1,1"
+            "version": "50.0.1,1"
           },
           {
             "licenses": [
@@ -473,21 +473,21 @@
               "LGPL3"
             ],
             "name": "py312-guessit",
-            "version": "4.1.0"
+            "version": "4.4.0"
           },
           {
             "licenses": [
               "GPLv2"
             ],
             "name": "py312-hachoir",
-            "version": "3.3.0"
+            "version": "3.4.0"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-idna",
-            "version": "3.18"
+            "version": "3.20"
           },
           {
             "licenses": [
@@ -508,21 +508,21 @@
               "MIT"
             ],
             "name": "py312-jaraco.functools",
-            "version": "4.5.0"
+            "version": "4.6.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-jaraco.text",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-markdown",
-            "version": "3.10.2"
+            "version": "3.10.3"
           },
           {
             "licenses": [
@@ -558,7 +558,7 @@
               "APACHE20"
             ],
             "name": "py312-packaging",
-            "version": "26.2"
+            "version": "26.3"
           },
           {
             "licenses": [
@@ -579,35 +579,35 @@
               "MIT"
             ],
             "name": "py312-portend",
-            "version": "2.5_2"
+            "version": "3.2.1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-puremagic",
-            "version": "1.30_1"
+            "version": "2.2.0"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-pycparser",
-            "version": "2.23"
+            "version": "3.0"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "py312-pygments",
-            "version": "2.20.0"
+            "version": "2.21.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-pyjwt",
-            "version": "2.13.0"
+            "version": "2.14.0"
           },
           {
             "licenses": [
@@ -628,14 +628,14 @@
               "MIT"
             ],
             "name": "py312-pyyaml",
-            "version": "6.0.3"
+            "version": "6.0.3_1"
           },
           {
             "licenses": [
               "ISCL"
             ],
             "name": "py312-rarfile",
-            "version": "4.1_1"
+            "version": "4.5"
           },
           {
             "licenses": [
@@ -709,45 +709,52 @@
           },
           {
             "licenses": [
-              "MIT"
+              "APACHE20"
             ],
             "name": "py312-tempora",
-            "version": "5.9.0"
+            "version": "5.12.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-typer",
-            "version": "0.26.7"
+            "version": "0.27.2_1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-typer-slim",
-            "version": "0.24.0"
+            "version": "0.24.0_1"
+          },
+          {
+            "licenses": [
+              "PSFL"
+            ],
+            "name": "py312-typing-extensions",
+            "version": "4.16.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-urllib3",
-            "version": "2.7.0,1"
+            "version": "2.8.0,1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-wheel",
-            "version": "0.47.0"
+            "version": "0.48.0"
           },
           {
             "licenses": [
               "ZPL21"
             ],
             "name": "py312-zc.lockfile",
-            "version": "3.0.post1_1"
+            "version": "4.0"
           },
           {
             "name": "python3",
@@ -758,14 +765,14 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14"
+            "version": "3.12.14_1"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
@@ -786,14 +793,14 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.3,1"
+            "version": "3.53.4,1"
           },
           {
             "licenses": [
               "UNRAR"
             ],
             "name": "unrar",
-            "version": "7.23,6"
+            "version": "7.23_1,6"
           }
         ],
         "go": [],
@@ -812,11 +819,6 @@
             "version": "2.1.1"
           },
           {
-            "name": "PyYAML",
-            "purl": "",
-            "version": "6.0.3"
-          },
-          {
             "name": "SQLObject",
             "purl": "",
             "version": "3.11.0"
@@ -824,7 +826,7 @@
           {
             "name": "annotated-doc",
             "purl": "",
-            "version": "0.0.4"
+            "version": "0.0.5"
           },
           {
             "name": "apprise",
@@ -844,22 +846,22 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.6.17"
+            "version": "2026.7.22"
           },
           {
             "name": "cffi",
             "purl": "",
-            "version": "2.0.0"
+            "version": "2.1.1"
           },
           {
             "name": "chardet",
             "purl": "",
-            "version": "7.4.3"
+            "version": "7.6.0"
           },
           {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.4.7"
+            "version": "3.5.1"
           },
           {
             "name": "cheetah",
@@ -884,7 +886,7 @@
           {
             "name": "cryptography",
             "purl": "",
-            "version": "48.0.1"
+            "version": "50.0.1"
           },
           {
             "name": "example",
@@ -904,17 +906,17 @@
           {
             "name": "guessit",
             "purl": "",
-            "version": "4.1.0"
+            "version": "4.4.0"
           },
           {
             "name": "hachoir",
             "purl": "",
-            "version": "3.3.0"
+            "version": "3.4.0"
           },
           {
             "name": "idna",
             "purl": "",
-            "version": "3.18"
+            "version": "3.20"
           },
           {
             "name": "jaraco.collections",
@@ -929,17 +931,17 @@
           {
             "name": "jaraco.functools",
             "purl": "",
-            "version": "4.5.0"
+            "version": "4.6.0"
           },
           {
             "name": "jaraco.text",
             "purl": "",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "name": "markdown",
             "purl": "",
-            "version": "3.10.2"
+            "version": "3.10.3"
           },
           {
             "name": "markdown-it-py",
@@ -964,7 +966,7 @@
           {
             "name": "packaging",
             "purl": "",
-            "version": "26.2"
+            "version": "26.3"
           },
           {
             "name": "paho-mqtt",
@@ -979,27 +981,27 @@
           {
             "name": "portend",
             "purl": "",
-            "version": "2.5"
+            "version": "3.2.1"
           },
           {
             "name": "puremagic",
             "purl": "",
-            "version": "1.30"
+            "version": "2.2.0"
           },
           {
             "name": "pycparser",
             "purl": "",
-            "version": "2.23"
+            "version": "3.0"
           },
           {
             "name": "pygments",
             "purl": "",
-            "version": "2.20.0"
+            "version": "2.21.0"
           },
           {
             "name": "pyjwt",
             "purl": "",
-            "version": "2.13.0"
+            "version": "2.14.0"
           },
           {
             "name": "pysocks",
@@ -1010,6 +1012,11 @@
             "name": "python-dateutil",
             "purl": "",
             "version": "2.9.0"
+          },
+          {
+            "name": "pyyaml",
+            "purl": "",
+            "version": "6.0.3"
           },
           {
             "name": "rarfile",
@@ -1069,12 +1076,12 @@
           {
             "name": "tempora",
             "purl": "",
-            "version": "5.9.0"
+            "version": "5.12.0"
           },
           {
             "name": "typer",
             "purl": "",
-            "version": "0.26.7"
+            "version": "0.27.2"
           },
           {
             "name": "typer-slim",
@@ -1082,19 +1089,24 @@
             "version": "0.24.0"
           },
           {
+            "name": "typing_extensions",
+            "purl": "",
+            "version": "4.16.0"
+          },
+          {
             "name": "urllib3",
             "purl": "",
-            "version": "2.7.0"
+            "version": "2.8.0"
           },
           {
             "name": "wheel",
             "purl": "",
-            "version": "0.47.0"
+            "version": "0.48.0"
           },
           {
             "name": "zc.lockfile",
             "purl": "",
-            "version": "3.0.post1"
+            "version": "4.0"
           }
         ],
         "ruby": [],
@@ -1103,21 +1115,21 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 112,
+        "freebsd": 113,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 59,
+        "python": 60,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 173
       }
     },
     "pkg": {
       "app_version": "5.0.1",
       "arch": "amd64",
-      "generated": "2026-10-02T23:48:01Z",
+      "generated": "2026-10-03T22:54:20Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2216,7 +2228,7 @@
     "pkg-latest": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-10-02T23:48:23Z",
+      "generated": "2026-10-03T22:52:41Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2811,7 +2823,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-pycparser",
-            "version": "2.23"
+            "version": "3.0"
           },
           {
             "licenses": [
@@ -2892,6 +2904,13 @@
           },
           {
             "licenses": [
+              "MIT"
+            ],
+            "name": "py312-setuptools",
+            "version": "63.1.0_3"
+          },
+          {
+            "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "py312-sgmllib3k",
@@ -2937,14 +2956,14 @@
               "MIT"
             ],
             "name": "py312-typer",
-            "version": "0.27.2"
+            "version": "0.27.2_1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-typer-slim",
-            "version": "0.24.0"
+            "version": "0.24.0_1"
           },
           {
             "licenses": [
@@ -2965,7 +2984,7 @@
               "ZPL21"
             ],
             "name": "py312-zc.lockfile",
-            "version": "3.0.post1_1"
+            "version": "4.0"
           },
           {
             "name": "python3",
@@ -3211,7 +3230,7 @@
           {
             "name": "pycparser",
             "purl": "",
-            "version": "2.23"
+            "version": "3.0"
           },
           {
             "name": "pygments",
@@ -3269,6 +3288,11 @@
             "version": "9.6.3"
           },
           {
+            "name": "setuptools",
+            "purl": "",
+            "version": "63.1.0"
+          },
+          {
             "name": "sgmllib3k",
             "purl": "",
             "version": "1.0.0"
@@ -3316,7 +3340,7 @@
           {
             "name": "zc.lockfile",
             "purl": "",
-            "version": "3.0.post1"
+            "version": "4.0"
           }
         ],
         "ruby": [],
@@ -3325,15 +3349,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 114,
+        "freebsd": 115,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 58,
+        "python": 59,
         "ruby": 0,
         "rust": 0,
-        "total": 172
+        "total": 174
       }
     }
   }
