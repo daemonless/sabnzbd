@@ -5,6 +5,9 @@ cit:
   health: /api?mode=version
 
 build:
+  architectures:
+    - amd64
+    - aarch64
   variants:
     - tag: latest
       containerfile: Containerfile
