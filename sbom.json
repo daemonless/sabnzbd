@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-11T07:49:05Z",
+  "generated": "2026-10-22T00:05:10Z",
   "image": "sabnzbd",
   "tags": {
     "latest-amd64": {
       "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-10-11T07:48:09Z",
+      "generated": "2026-10-22T00:04:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -16,7 +16,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.03"
+            "version": "26.04"
           },
           {
             "licenses": [
@@ -198,7 +198,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -247,7 +247,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -275,7 +275,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.5"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -459,7 +459,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-click",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "licenses": [
@@ -474,7 +474,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1,1"
+            "version": "50.0.1_1,1"
           },
           {
             "licenses": [
@@ -757,7 +757,7 @@
               "MIT"
             ],
             "name": "py312-slixmpp",
-            "version": "1.17.0"
+            "version": "1.17.0_1"
           },
           {
             "licenses": [
@@ -771,7 +771,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -838,7 +838,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -959,7 +959,7 @@
           {
             "name": "click",
             "purl": "",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "name": "configobj",
@@ -1184,7 +1184,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tempora",
@@ -1242,7 +1242,7 @@
     "pkg-amd64": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-10-11T07:47:17Z",
+      "generated": "2026-10-22T00:03:04Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1253,7 +1253,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.03"
+            "version": "26.04"
           },
           {
             "licenses": [
@@ -1435,7 +1435,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1484,7 +1484,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1498,7 +1498,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -1949,7 +1949,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -2009,7 +2009,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -2324,7 +2324,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tempora",
@@ -2377,7 +2377,7 @@
     "pkg-latest-amd64": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-10-11T07:47:10Z",
+      "generated": "2026-10-22T00:04:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2388,7 +2388,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.03"
+            "version": "26.04"
           },
           {
             "licenses": [
@@ -2570,7 +2570,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2619,7 +2619,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2633,7 +2633,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -2647,7 +2647,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.5"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -2839,7 +2839,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-click",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "licenses": [
@@ -2854,7 +2854,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1,1"
+            "version": "50.0.1_1,1"
           },
           {
             "licenses": [
@@ -3143,7 +3143,7 @@
               "MIT"
             ],
             "name": "py312-slixmpp",
-            "version": "1.17.0"
+            "version": "1.17.0_1"
           },
           {
             "licenses": [
@@ -3157,7 +3157,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -3217,7 +3217,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -3347,7 +3347,7 @@
           {
             "name": "click",
             "purl": "",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "name": "configobj",
@@ -3572,7 +3572,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tempora",
