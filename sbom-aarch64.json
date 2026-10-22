@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-11T08:16:49Z",
+  "generated": "2026-10-22T00:33:08Z",
   "image": "sabnzbd",
   "tags": {
     "latest-aarch64": {
       "app_version": "5.1.3",
       "arch": "aarch64",
-      "generated": "2026-10-11T08:14:58Z",
+      "generated": "2026-10-22T00:31:26Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -16,7 +16,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.03"
+            "version": "26.04"
           },
           {
             "licenses": [
@@ -198,7 +198,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -247,7 +247,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -261,7 +261,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -275,7 +275,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.5"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -284,6 +284,14 @@
             ],
             "name": "gettext-runtime",
             "version": "1.0_1"
+          },
+          {
+            "licenses": [
+              "BSD3CLAUSE",
+              "GPLv3"
+            ],
+            "name": "hidapi",
+            "version": "0.15.0"
           },
           {
             "licenses": [
@@ -312,6 +320,13 @@
             ],
             "name": "libffi",
             "version": "3.8.0"
+          },
+          {
+            "licenses": [
+              "GPLv3"
+            ],
+            "name": "libiconv",
+            "version": "1.18_1"
           },
           {
             "licenses": [
@@ -350,6 +365,20 @@
           },
           {
             "licenses": [
+              "BSD3CLAUSE"
+            ],
+            "name": "py312-PGPy",
+            "version": "0.6.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-aiodns",
+            "version": "4.0.0"
+          },
+          {
+            "licenses": [
               "MIT"
             ],
             "name": "py312-annotated-doc",
@@ -360,7 +389,7 @@
               "BSD2CLAUSE"
             ],
             "name": "py312-apprise",
-            "version": "1.11.0"
+            "version": "1.13.1"
           },
           {
             "licenses": [
@@ -430,7 +459,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-click",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "licenses": [
@@ -445,7 +474,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1,1"
+            "version": "50.0.1_1,1"
           },
           {
             "licenses": [
@@ -481,6 +510,15 @@
             ],
             "name": "py312-hachoir",
             "version": "3.4.0"
+          },
+          {
+            "licenses": [
+              "PD",
+              "BSD3CLAUSE",
+              "GPLv3"
+            ],
+            "name": "py312-hidapi",
+            "version": "0.15.0"
           },
           {
             "licenses": [
@@ -590,6 +628,27 @@
           },
           {
             "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1",
+            "version": "0.6.4"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1-modules",
+            "version": "0.4.1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pycares",
+            "version": "5.0.1"
+          },
+          {
+            "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-pycparser",
@@ -695,10 +754,24 @@
           },
           {
             "licenses": [
+              "MIT"
+            ],
+            "name": "py312-slixmpp",
+            "version": "1.17.0_1"
+          },
+          {
+            "licenses": [
+              "LGPL3"
+            ],
+            "name": "py312-smpplib",
+            "version": "2.2.4"
+          },
+          {
+            "licenses": [
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -765,7 +838,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -819,9 +892,19 @@
             "version": "2.1.1"
           },
           {
+            "name": "PGPy",
+            "purl": "",
+            "version": "0.6.0"
+          },
+          {
             "name": "SQLObject",
             "purl": "",
             "version": "3.11.0"
+          },
+          {
+            "name": "aiodns",
+            "purl": "",
+            "version": "4.0.0"
           },
           {
             "name": "annotated-doc",
@@ -831,7 +914,7 @@
           {
             "name": "apprise",
             "purl": "",
-            "version": "1.11.0"
+            "version": "1.13.1"
           },
           {
             "name": "babelfish",
@@ -876,7 +959,7 @@
           {
             "name": "click",
             "purl": "",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "name": "configobj",
@@ -912,6 +995,11 @@
             "name": "hachoir",
             "purl": "",
             "version": "3.4.0"
+          },
+          {
+            "name": "hidapi",
+            "purl": "",
+            "version": "0.15.0"
           },
           {
             "name": "idna",
@@ -987,6 +1075,21 @@
             "name": "puremagic",
             "purl": "",
             "version": "2.2.0"
+          },
+          {
+            "name": "pyasn1",
+            "purl": "",
+            "version": "0.6.4"
+          },
+          {
+            "name": "pyasn1-modules",
+            "purl": "",
+            "version": "0.4.1"
+          },
+          {
+            "name": "pycares",
+            "purl": "",
+            "version": "5.0.1"
           },
           {
             "name": "pycparser",
@@ -1069,9 +1172,19 @@
             "version": "1.17.0"
           },
           {
+            "name": "slixmpp",
+            "purl": "",
+            "version": "1.17.0"
+          },
+          {
+            "name": "smpplib",
+            "purl": "",
+            "version": "2.2.4"
+          },
+          {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tempora",
@@ -1115,21 +1228,21 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 113,
+        "freebsd": 123,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 60,
+        "python": 68,
         "ruby": 0,
         "rust": 0,
-        "total": 173
+        "total": 191
       }
     },
     "pkg-aarch64": {
       "app_version": "5.1.2",
       "arch": "aarch64",
-      "generated": "2026-10-11T08:15:04Z",
+      "generated": "2026-10-22T00:31:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1322,7 +1435,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -1371,7 +1484,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2264,7 +2377,7 @@
     "pkg-latest-aarch64": {
       "app_version": "5.1.2",
       "arch": "aarch64",
-      "generated": "2026-10-11T08:15:09Z",
+      "generated": "2026-10-22T00:31:35Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2275,7 +2388,7 @@
               "UNRAR"
             ],
             "name": "7-zip",
-            "version": "26.03"
+            "version": "26.04"
           },
           {
             "licenses": [
@@ -2457,7 +2570,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2506,7 +2619,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -2520,7 +2633,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -2534,7 +2647,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.5"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -2543,6 +2656,14 @@
             ],
             "name": "gettext-runtime",
             "version": "1.0_1"
+          },
+          {
+            "licenses": [
+              "BSD3CLAUSE",
+              "GPLv3"
+            ],
+            "name": "hidapi",
+            "version": "0.15.0"
           },
           {
             "licenses": [
@@ -2571,6 +2692,13 @@
             ],
             "name": "libffi",
             "version": "3.8.0"
+          },
+          {
+            "licenses": [
+              "GPLv3"
+            ],
+            "name": "libiconv",
+            "version": "1.18_1"
           },
           {
             "licenses": [
@@ -2617,6 +2745,20 @@
           },
           {
             "licenses": [
+              "BSD3CLAUSE"
+            ],
+            "name": "py312-PGPy",
+            "version": "0.6.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-aiodns",
+            "version": "4.0.0"
+          },
+          {
+            "licenses": [
               "MIT"
             ],
             "name": "py312-annotated-doc",
@@ -2627,7 +2769,7 @@
               "BSD2CLAUSE"
             ],
             "name": "py312-apprise",
-            "version": "1.11.0"
+            "version": "1.13.1"
           },
           {
             "licenses": [
@@ -2697,7 +2839,7 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-click",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "licenses": [
@@ -2712,7 +2854,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1,1"
+            "version": "50.0.1_1,1"
           },
           {
             "licenses": [
@@ -2748,6 +2890,15 @@
             ],
             "name": "py312-hachoir",
             "version": "3.4.0"
+          },
+          {
+            "licenses": [
+              "PD",
+              "BSD3CLAUSE",
+              "GPLv3"
+            ],
+            "name": "py312-hidapi",
+            "version": "0.15.0"
           },
           {
             "licenses": [
@@ -2849,10 +3000,31 @@
           },
           {
             "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1",
+            "version": "0.6.4"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "py312-pyasn1-modules",
+            "version": "0.4.1"
+          },
+          {
+            "licenses": [
               "MIT"
             ],
             "name": "py312-pybonjour",
             "version": "1.1.1_1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pycares",
+            "version": "5.0.1"
           },
           {
             "licenses": [
@@ -2968,10 +3140,24 @@
           },
           {
             "licenses": [
+              "MIT"
+            ],
+            "name": "py312-slixmpp",
+            "version": "1.17.0_1"
+          },
+          {
+            "licenses": [
+              "LGPL3"
+            ],
+            "name": "py312-smpplib",
+            "version": "2.2.4"
+          },
+          {
+            "licenses": [
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.14_10"
+            "version": "3.12.15_10"
           },
           {
             "licenses": [
@@ -3031,7 +3217,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -3094,9 +3280,19 @@
             "version": "2.1.1"
           },
           {
+            "name": "PGPy",
+            "purl": "",
+            "version": "0.6.0"
+          },
+          {
             "name": "SQLObject",
             "purl": "",
             "version": "3.11.0"
+          },
+          {
+            "name": "aiodns",
+            "purl": "",
+            "version": "4.0.0"
           },
           {
             "name": "annotated-doc",
@@ -3106,7 +3302,7 @@
           {
             "name": "apprise",
             "purl": "",
-            "version": "1.11.0"
+            "version": "1.13.1"
           },
           {
             "name": "babelfish",
@@ -3151,7 +3347,7 @@
           {
             "name": "click",
             "purl": "",
-            "version": "8.3.1"
+            "version": "8.5.0"
           },
           {
             "name": "configobj",
@@ -3187,6 +3383,11 @@
             "name": "hachoir",
             "purl": "",
             "version": "3.4.0"
+          },
+          {
+            "name": "hidapi",
+            "purl": "",
+            "version": "0.15.0"
           },
           {
             "name": "idna",
@@ -3259,9 +3460,24 @@
             "version": "2.2.0"
           },
           {
+            "name": "pyasn1",
+            "purl": "",
+            "version": "0.6.4"
+          },
+          {
+            "name": "pyasn1-modules",
+            "purl": "",
+            "version": "0.4.1"
+          },
+          {
             "name": "pybonjour",
             "purl": "",
             "version": "1.1.1"
+          },
+          {
+            "name": "pycares",
+            "purl": "",
+            "version": "5.0.1"
           },
           {
             "name": "pycparser",
@@ -3344,9 +3560,19 @@
             "version": "1.17.0"
           },
           {
+            "name": "slixmpp",
+            "purl": "",
+            "version": "1.17.0"
+          },
+          {
+            "name": "smpplib",
+            "purl": "",
+            "version": "2.2.4"
+          },
+          {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.14"
+            "version": "3.12.15"
           },
           {
             "name": "tempora",
@@ -3385,15 +3611,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 115,
+        "freebsd": 125,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 59,
+        "python": 67,
         "ruby": 0,
         "rust": 0,
-        "total": 174
+        "total": 192
       }
     }
   }
