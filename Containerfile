@@ -10,7 +10,7 @@ ARG BASE_VERSION=15-latest
 # SABnzbd requires the exact sabctools version pinned in its release's
 # requirements.txt -- anything newer and it boots with downloading
 # disabled ("SABCTools disabled: no correct version found").
-FROM ghcr.io/daemonless/base:${BASE_VERSION} AS builder
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION} AS builder
 RUN pkg update && \
     pkg install -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev python3 py312-pip py312-setuptools py312-wheel && \
     SABNZBD_VERSION=$(fetch -qo - "https://api.github.com/repos/sabnzbd/sabnzbd/releases/latest" | jq -r ".tag_name") && \
