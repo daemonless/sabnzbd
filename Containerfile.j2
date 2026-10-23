@@ -17,7 +17,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # --- Final stage ---
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="python3 py312-pip py312-setuptools py312-wheel py312-sqlite3 py312-cryptography py312-feedparser py312-configobj py312-cherrypy py312-portend py312-chardet py312-pysocks py312-guessit py312-puremagic py312-rarfile py312-hachoir py312-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
@@ -89,9 +89,10 @@ RUN mkdir -p /config /downloads/complete /downloads/incomplete && \
 
 # Copy service definition and init scripts
 COPY root/ /
+RUN rm /daemonless/libexec/sabnzbd.pkg && \
+    chmod +x /daemonless/libexec/sabnzbd /daemonless/init.d/*
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/sabnzbd/run /etc/cont-init.d/* 2>/dev/null || true
+CMD ["/daemonless/libexec/sabnzbd"]
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}

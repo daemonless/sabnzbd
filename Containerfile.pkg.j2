@@ -1,5 +1,5 @@
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=sabnzbd
@@ -49,16 +49,12 @@ RUN mkdir -p /config /downloads/complete /downloads/incomplete
 
 # Copy service definition
 COPY root/ /
+RUN chmod +x /daemonless/libexec/sabnzbd /daemonless/init.d/* /daemonless/libexec/sabnzbd.pkg
 
-# Use pkg-specific run script
-COPY root/etc/services.d/sabnzbd/run.pkg /etc/services.d/sabnzbd/run
+CMD ["/daemonless/libexec/sabnzbd"]
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/sabnzbd/run /etc/cont-init.d/* 2>/dev/null || true
-
-# Set up s6 service link
-RUN mkdir -p /run/s6/services/sabnzbd && \
-    ln -sf /etc/services.d/sabnzbd/run /run/s6/services/sabnzbd/run
+# The pkg layout's launcher
+RUN mv /daemonless/libexec/sabnzbd.pkg /daemonless/libexec/sabnzbd
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}

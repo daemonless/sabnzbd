@@ -1,5 +1,5 @@
 #!/bin/sh
-# SABnzbd s6 service (pkg version)
+# Start sabnzbd; /init has already dropped to the run user.
 
 export HOME=/config
 
@@ -10,7 +10,4 @@ export HOME=/config
 SERVER=""
 [ -f /config/sabnzbd.ini ] || SERVER="--server 0.0.0.0:8080"
 
-# Signal readiness once the web UI answers
-s6-ready-when fetch -qo /dev/null http://localhost:8080/
-
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/bin/python3 /usr/local/bin/SABnzbd.py --config-file /config/sabnzbd.ini $SERVER
+exec /usr/local/bin/python3 /usr/local/bin/SABnzbd.py --config-file /config/sabnzbd.ini $SERVER
