@@ -18,19 +18,71 @@ fi
 mkdir -p /config /downloads/complete /downloads/incomplete
 chown -R bsd:bsd /config /downloads /app/sabnzbd
 
-# If HOST_WHITELIST is set and no config exists, create initial config
-# This allows users to set the whitelist via environment variable
-if [ -n "${HOST_WHITELIST}" ] && [ ! -f /config/sabnzbd.ini ]; then
-    echo "Creating initial config with HOST_WHITELIST: ${HOST_WHITELIST}"
+# HOST_ALLOWLIST: names SABnzbd answers to, added to its host_whitelist.
+# HOST_WHITELIST is the older name for the same thing; both are read.
+HOST_ALLOWLIST="${HOST_ALLOWLIST}${HOST_ALLOWLIST:+${HOST_WHITELIST:+,}}${HOST_WHITELIST}"
+
+# If HOST_ALLOWLIST is set and no config exists, create initial config
+if [ -n "${HOST_ALLOWLIST}" ] && [ ! -f /config/sabnzbd.ini ]; then
+    echo "Creating initial config with HOST_ALLOWLIST: ${HOST_ALLOWLIST}"
     cat > /config/sabnzbd.ini << EOF
 __version__ = 19
 __encoding__ = utf-8
 [misc]
 host = 0.0.0.0
 port = 8080
-host_whitelist = ${HOST_WHITELIST}
+host_whitelist = ${HOST_ALLOWLIST}
 download_dir = /downloads/incomplete
 complete_dir = /downloads/complete
 EOF
     chown bsd:bsd /config/sabnzbd.ini
 fi
+
+# Add the names in HOST_ALLOWLIST to host_whitelist in an existing config,
+# on every start: a name given later (fjord's name_env) reaches SABnzbd,
+# which refuses a name not on its list ("Hostname verification failed").
+# Names already there stay; nothing is removed.
+merge_host_whitelist() {
+    ini=/config/sabnzbd.ini
+    [ -n "${HOST_ALLOWLIST}" ] && [ -f "$ini" ] || return 0
+    tmp="$ini.whitelist.$$"
+    awk -v add="${HOST_ALLOWLIST}" '
+        function trim(s) { gsub(/^[ \t]+|[ \t]+$/, "", s); return s }
+        function merged(cur,   n, i, v, out, seen, parts) {
+            out = ""
+            n = split(cur, parts, ",")
+            for (i = 1; i <= n; i++) {
+                v = trim(parts[i])
+                if (v == "" || v == "\"\"" || (tolower(v) in seen)) continue
+                seen[tolower(v)] = 1
+                out = out (out == "" ? "" : ", ") v
+            }
+            n = split(add, parts, ",")
+            for (i = 1; i <= n; i++) {
+                v = trim(parts[i])
+                if (v == "" || (tolower(v) in seen)) continue
+                seen[tolower(v)] = 1
+                out = out (out == "" ? "" : ", ") v
+            }
+            return "host_whitelist = " out
+        }
+        /^\[/ {
+            if (inmisc && !done) { print merged(""); done = 1 }
+            inmisc = ($0 == "[misc]")
+            print; next
+        }
+        inmisc && !done && /^host_whitelist[ \t]*=/ {
+            cur = $0; sub(/^host_whitelist[ \t]*=[ \t]*/, "", cur)
+            print merged(cur); done = 1; next
+        }
+        { print }
+        END { if (inmisc && !done) print merged("") }
+    ' "$ini" > "$tmp" || { rm -f "$tmp"; return 0; }
+    if cmp -s "$tmp" "$ini"; then
+        rm -f "$tmp"
+    else
+        cat "$tmp" > "$ini" && rm -f "$tmp"
+        echo "Added the names in HOST_ALLOWLIST to host_whitelist"
+    fi
+}
+merge_host_whitelist

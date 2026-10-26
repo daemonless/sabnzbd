@@ -11,12 +11,17 @@ x-daemonless:
   user: "bsd"
   mlock: false
   appjail: true
+  # fjord fills these with the names a names provider gives the app:
+  # SABnzbd refuses a name not on its host_whitelist.
+  name_env:
+    HOST_ALLOWLIST: "{names}"
 
   docs:
     env:
       PUID: "User ID for the application process"
       PGID: "Group ID for the application process"
       TZ: "Timezone for the container"
+      HOST_ALLOWLIST: "Extra names SABnzbd answers to, comma-separated; added to its host_whitelist at every start (HOST_WHITELIST also works)"
     volumes:
       /config: "Configuration directory"
       /downloads: "Download directory"

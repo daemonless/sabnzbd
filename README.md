@@ -41,6 +41,7 @@ services:
       - PUID=1000  # User ID for the application process
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
+      # - HOST_ALLOWLIST=  # Extra names SABnzbd answers to, comma-separated; added to its host_whitelist at every start (HOST_WHITELIST also works)
     volumes:
       - "/containers/sabnzbd:/config"
       - "/path/to/downloads:/downloads"
@@ -136,8 +137,7 @@ services:
 ```
 
 Save as `bastille-compose.yml`, then run `bastille up`.
-
-Access at: `http://localhost:8080`
+Open `http://<server>:8080` from another machine (the server's own browser can't use a published port).
 
 ## Parameters
 
@@ -148,6 +148,7 @@ Access at: `http://localhost:8080`
 | `PUID` | `1000` | User ID for the application process |
 | `PGID` | `1000` | Group ID for the application process |
 | `TZ` | `UTC` | Timezone for the container |
+| `HOST_ALLOWLIST` | `` | Extra names SABnzbd answers to, comma-separated; added to its host_whitelist at every start (HOST_WHITELIST also works) |
 
 ### Volumes
 
