@@ -5,28 +5,10 @@
 # --------------------------------------------------------------------------
 
 ARG BASE_VERSION=15-latest
-
-# --- Build stage: compile sabctools from source ---
-# SABnzbd requires the exact sabctools version pinned in its release's
-# requirements.txt -- anything newer and it boots with downloading
-# disabled ("SABCTools disabled: no correct version found").
-FROM ghcr.io/daemonless/base-exec:${BASE_VERSION} AS builder
-RUN pkg update && \
-    pkg install -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev python3 py312-pip py312-setuptools py312-wheel && \
-    SABNZBD_VERSION=$(fetch -qo - "https://api.github.com/repos/sabnzbd/sabnzbd/releases/latest" | jq -r ".tag_name") && \
-    SABCTOOLS_PIN=$(fetch -qo - "https://raw.githubusercontent.com/sabnzbd/sabnzbd/${SABNZBD_VERSION}/requirements.txt" | grep -i '^sabctools==') && \
-    echo "Building ${SABCTOOLS_PIN} for SABnzbd ${SABNZBD_VERSION}" && \
-    pip install --break-system-packages --target=/tmp/sabctools-build --no-cache-dir "${SABCTOOLS_PIN}" && \
-    chmod -R a+rX /tmp/sabctools-build/sabctools* && \
-    pkg remove -y FreeBSD-clang FreeBSD-clang-dev FreeBSD-clibs-dev py312-pip py312-setuptools py312-wheel && \
-    pkg clean -ay && \
-    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
-
-# --- Final stage ---
 FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-ARG PACKAGES="python3 py312-pip py312-setuptools py312-wheel py312-sqlite3 py312-cryptography py312-feedparser py312-configobj py312-cherrypy py312-portend py312-chardet py312-pysocks py312-guessit py312-puremagic py312-rarfile py312-hachoir py312-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
+ARG PACKAGES="python3 py312-sabctools py312-sqlite3 py312-cryptography py312-feedparser py312-configobj py312-cherrypy py312-portend py312-chardet py312-pysocks py312-guessit py312-puremagic py312-rarfile py312-hachoir py312-apprise par2cmdline-turbo unrar 7-zip ca_root_nss"
 ARG UPSTREAM_URL="https://api.github.com/repos/sabnzbd/sabnzbd/releases/latest"
 ARG UPSTREAM_JQ=".tag_name"
 ARG HEALTHCHECK_ENDPOINT="http://localhost:8080/api?mode=version"
@@ -57,13 +39,6 @@ RUN pkg update && \
     ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
-
-# Copy compiled sabctools from builder
-COPY --from=builder /tmp/sabctools-build/ /usr/local/lib/python3.12/site-packages/
-
-# py312-rarfile (pkg) is stuck at 4.1 -- SABnzbd needs rarfile>=4.3 (rar5_s2k).
-RUN pip install --break-system-packages --no-cache-dir "rarfile==4.3" && \
-    chmod -R a+rX /usr/local/lib/python3.12/site-packages/rarfile*
 
 # Download and install SABnzbd from GitHub
 RUN mkdir -p /app/sabnzbd && \
