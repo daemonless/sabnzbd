@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T14:00:12Z",
+  "generated": "2026-11-12T10:55:26Z",
   "image": "sabnzbd",
   "tags": {
     "latest-amd64": {
       "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-11-04T13:59:19Z",
+      "generated": "2026-11-12T10:54:40Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -268,7 +268,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -354,7 +354,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -585,25 +585,10 @@
           },
           {
             "licenses": [
-              "BSD2CLAUSE",
-              "APACHE20"
-            ],
-            "name": "py312-packaging",
-            "version": "26.3"
-          },
-          {
-            "licenses": [
               "EPL"
             ],
             "name": "py312-paho-mqtt",
             "version": "2.1.0"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "py312-pip",
-            "version": "23.3.2_4"
           },
           {
             "licenses": [
@@ -726,6 +711,13 @@
           },
           {
             "licenses": [
+              "GPLv2+"
+            ],
+            "name": "py312-sabctools",
+            "version": "9.6.3"
+          },
+          {
+            "licenses": [
               "MIT"
             ],
             "name": "py312-setuptools",
@@ -814,13 +806,6 @@
             ],
             "name": "py312-urllib3",
             "version": "2.8.0,1"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "py312-wheel",
-            "version": "0.48.0"
           },
           {
             "licenses": [
@@ -1038,19 +1023,9 @@
             "version": "4.0.0"
           },
           {
-            "name": "packaging",
-            "purl": "",
-            "version": "26.3"
-          },
-          {
             "name": "paho-mqtt",
             "purl": "",
             "version": "2.1.0"
-          },
-          {
-            "name": "pip",
-            "purl": "",
-            "version": "23.3.2"
           },
           {
             "name": "portend",
@@ -1110,7 +1085,7 @@
           {
             "name": "rarfile",
             "purl": "",
-            "version": "4.3"
+            "version": "4.5"
           },
           {
             "name": "rebulk",
@@ -1203,11 +1178,6 @@
             "version": "2.8.0"
           },
           {
-            "name": "wheel",
-            "purl": "",
-            "version": "0.48.0"
-          },
-          {
             "name": "zc.lockfile",
             "purl": "",
             "version": "4.0"
@@ -1219,21 +1189,21 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 121,
+        "freebsd": 119,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 69,
+        "python": 66,
         "ruby": 0,
         "rust": 0,
-        "total": 190
+        "total": 185
       }
     },
     "pkg-amd64": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-11-04T13:58:06Z",
+      "generated": "2026-11-12T10:52:28Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1792,13 +1762,6 @@
             "licenses": [
               "MIT"
             ],
-            "name": "py312-pip",
-            "version": "23.3.2_4"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
             "name": "py312-portend",
             "version": "3.2.1"
           },
@@ -2192,11 +2155,6 @@
             "version": "2.1.0"
           },
           {
-            "name": "pip",
-            "purl": "",
-            "version": "23.3.2"
-          },
-          {
             "name": "portend",
             "purl": "",
             "version": "3.2.1"
@@ -2333,21 +2291,21 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 112,
+        "freebsd": 111,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 59,
+        "python": 58,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 169
       }
     },
     "pkg-latest-amd64": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-11-04T13:58:11Z",
+      "generated": "2026-11-12T10:50:27Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2610,7 +2568,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -2704,7 +2662,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -2939,13 +2897,6 @@
             ],
             "name": "py312-paho-mqtt",
             "version": "2.1.0"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "py312-pip",
-            "version": "23.3.2_4"
           },
           {
             "licenses": [
@@ -3401,11 +3352,6 @@
             "version": "2.1.0"
           },
           {
-            "name": "pip",
-            "purl": "",
-            "version": "23.3.2"
-          },
-          {
             "name": "portend",
             "purl": "",
             "version": "3.2.1"
@@ -3572,15 +3518,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 123,
+        "freebsd": 122,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 68,
+        "python": 67,
         "ruby": 0,
         "rust": 0,
-        "total": 191
+        "total": 189
       }
     }
   }
