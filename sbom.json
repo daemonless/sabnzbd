@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-12T10:55:26Z",
+  "generated": "2026-11-14T16:36:00Z",
   "image": "sabnzbd",
   "tags": {
     "latest-amd64": {
       "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-11-12T10:54:40Z",
+      "generated": "2026-11-14T16:35:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1201,9 +1201,9 @@
       }
     },
     "pkg-amd64": {
-      "app_version": "5.1.2",
+      "app_version": "5.1.3",
       "arch": "amd64",
-      "generated": "2026-11-12T10:52:28Z",
+      "generated": "2026-11-14T16:34:40Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1513,14 +1513,6 @@
           },
           {
             "licenses": [
-              "BSD3CLAUSE",
-              "APACHE20"
-            ],
-            "name": "mDNSResponder",
-            "version": "2881.120.11"
-          },
-          {
-            "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "mpdecimal",
@@ -1580,7 +1572,7 @@
               "MPL20"
             ],
             "name": "py312-certifi",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "licenses": [
@@ -1588,13 +1580,6 @@
             ],
             "name": "py312-cffi",
             "version": "2.1.1"
-          },
-          {
-            "licenses": [
-              "BSD0CLAUSE"
-            ],
-            "name": "py312-chardet",
-            "version": "7.6.0,1"
           },
           {
             "licenses": [
@@ -1692,6 +1677,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-jaraco.classes",
+            "version": "3.4.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-jaraco.collections",
             "version": "5.2.1"
           },
@@ -1753,6 +1745,14 @@
           },
           {
             "licenses": [
+              "MIT",
+              "APACHE20"
+            ],
+            "name": "py312-orjson",
+            "version": "3.11.9_2"
+          },
+          {
+            "licenses": [
               "EPL"
             ],
             "name": "py312-paho-mqtt",
@@ -1771,13 +1771,6 @@
             ],
             "name": "py312-puremagic",
             "version": "2.2.0"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "py312-pybonjour",
-            "version": "1.1.1_1"
           },
           {
             "licenses": [
@@ -1813,6 +1806,13 @@
             ],
             "name": "py312-python-dateutil",
             "version": "2.9.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pytz",
+            "version": "2026.3,1"
           },
           {
             "licenses": [
@@ -1896,7 +1896,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.15_10"
+            "version": "3.12.16_10"
           },
           {
             "licenses": [
@@ -1956,7 +1956,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -1972,7 +1972,7 @@
               "WTFPL"
             ],
             "name": "sabnzbd",
-            "version": "5.1.2"
+            "version": "5.1.3"
           },
           {
             "licenses": [
@@ -2032,17 +2032,12 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "name": "cffi",
             "purl": "",
             "version": "2.1.1"
-          },
-          {
-            "name": "chardet",
-            "purl": "",
-            "version": "7.6.0"
           },
           {
             "name": "charset-normalizer",
@@ -2105,6 +2100,11 @@
             "version": "3.20"
           },
           {
+            "name": "jaraco.classes",
+            "purl": "",
+            "version": "3.4.0"
+          },
+          {
             "name": "jaraco.collections",
             "purl": "",
             "version": "5.2.1"
@@ -2150,6 +2150,11 @@
             "version": "3.3.1"
           },
           {
+            "name": "orjson",
+            "purl": "",
+            "version": "3.11.9"
+          },
+          {
             "name": "paho-mqtt",
             "purl": "",
             "version": "2.1.0"
@@ -2163,11 +2168,6 @@
             "name": "puremagic",
             "purl": "",
             "version": "2.2.0"
-          },
-          {
-            "name": "pybonjour",
-            "purl": "",
-            "version": "1.1.1"
           },
           {
             "name": "pycparser",
@@ -2193,6 +2193,11 @@
             "name": "python-dateutil",
             "purl": "",
             "version": "2.9.0"
+          },
+          {
+            "name": "pytz",
+            "purl": "",
+            "version": "2026.3"
           },
           {
             "name": "pyyaml",
@@ -2252,7 +2257,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "name": "tempora",
@@ -2296,16 +2301,16 @@
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 58,
+        "python": 59,
         "ruby": 0,
         "rust": 0,
-        "total": 169
+        "total": 170
       }
     },
     "pkg-latest-amd64": {
       "app_version": "5.1.2",
       "arch": "amd64",
-      "generated": "2026-11-12T10:50:27Z",
+      "generated": "2026-11-14T16:34:38Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
