@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-17T09:29:40Z",
+  "generated": "2026-11-20T12:57:17Z",
   "image": "sabnzbd",
   "tags": {
     "latest-aarch64": {
       "app_version": "5.1.3",
       "arch": "aarch64",
-      "generated": "2026-11-17T09:27:05Z",
+      "generated": "2026-11-20T12:53:28Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -354,7 +354,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.9.0"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -376,6 +376,13 @@
             ],
             "name": "py312-annotated-doc",
             "version": "0.0.5"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-annotated-types",
+            "version": "0.8.0"
           },
           {
             "licenses": [
@@ -403,7 +410,7 @@
               "MPL20"
             ],
             "name": "py312-certifi",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "licenses": [
@@ -417,14 +424,14 @@
               "BSD0CLAUSE"
             ],
             "name": "py312-chardet",
-            "version": "7.6.0,1"
+            "version": "7.7.0,1"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-charset-normalizer",
-            "version": "3.5.1"
+            "version": "3.5.2"
           },
           {
             "licenses": [
@@ -467,7 +474,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1_1,1"
+            "version": "50.0.2,1"
           },
           {
             "licenses": [
@@ -553,14 +560,14 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-markdown",
-            "version": "3.11"
+            "version": "3.11.3"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-markdown-it-py",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -574,14 +581,14 @@
               "MIT"
             ],
             "name": "py312-more-itertools",
-            "version": "11.1.0"
+            "version": "11.2.1"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-oauthlib",
-            "version": "4.0.0"
+            "version": "4.0.1"
           },
           {
             "licenses": [
@@ -630,7 +637,21 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-pycparser",
-            "version": "3.0"
+            "version": "3.1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pydantic-core",
+            "version": "2.50.4"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pydantic2",
+            "version": "2.14.3"
           },
           {
             "licenses": [
@@ -763,7 +784,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.15_10"
+            "version": "3.12.16_10"
           },
           {
             "licenses": [
@@ -777,14 +798,14 @@
               "APACHE20"
             ],
             "name": "py312-tempora",
-            "version": "5.12.0"
+            "version": "5.13.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-typer",
-            "version": "0.27.2_1"
+            "version": "0.29.1"
           },
           {
             "licenses": [
@@ -804,6 +825,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-typing-inspection",
+            "version": "0.4.5"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-urllib3",
             "version": "2.8.0,1"
           },
@@ -812,7 +840,7 @@
               "ZPL21"
             ],
             "name": "py312-zc.lockfile",
-            "version": "4.0"
+            "version": "4.1"
           },
           {
             "name": "python3",
@@ -823,7 +851,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -883,6 +911,11 @@
             "version": "0.0.5"
           },
           {
+            "name": "annotated-types",
+            "purl": "",
+            "version": "0.8.0"
+          },
+          {
             "name": "apprise",
             "purl": "",
             "version": "1.13.1"
@@ -900,7 +933,7 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "name": "cffi",
@@ -910,12 +943,12 @@
           {
             "name": "chardet",
             "purl": "",
-            "version": "7.6.0"
+            "version": "7.7.0"
           },
           {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.5.1"
+            "version": "3.5.2"
           },
           {
             "name": "cheetah",
@@ -940,7 +973,7 @@
           {
             "name": "cryptography",
             "purl": "",
-            "version": "50.0.1"
+            "version": "50.0.2"
           },
           {
             "name": "example",
@@ -1000,12 +1033,12 @@
           {
             "name": "markdown",
             "purl": "",
-            "version": "3.11"
+            "version": "3.11.3"
           },
           {
             "name": "markdown-it-py",
             "purl": "",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "name": "mdurl",
@@ -1015,12 +1048,12 @@
           {
             "name": "more-itertools",
             "purl": "",
-            "version": "11.1.0"
+            "version": "11.2.1"
           },
           {
             "name": "oauthlib",
             "purl": "",
-            "version": "4.0.0"
+            "version": "4.0.1"
           },
           {
             "name": "paho-mqtt",
@@ -1055,7 +1088,17 @@
           {
             "name": "pycparser",
             "purl": "",
-            "version": "3.0"
+            "version": "3.1"
+          },
+          {
+            "name": "pydantic",
+            "purl": "",
+            "version": "2.14.3"
+          },
+          {
+            "name": "pydantic_core",
+            "purl": "",
+            "version": "2.50.4"
           },
           {
             "name": "pygments",
@@ -1145,7 +1188,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "name": "sqlobject",
@@ -1155,17 +1198,22 @@
           {
             "name": "tempora",
             "purl": "",
-            "version": "5.12.0"
+            "version": "5.13.0"
           },
           {
             "name": "typer",
             "purl": "",
-            "version": "0.27.2"
+            "version": "0.29.1"
           },
           {
             "name": "typer-slim",
             "purl": "",
             "version": "0.24.0"
+          },
+          {
+            "name": "typing-inspection",
+            "purl": "",
+            "version": "0.4.5"
           },
           {
             "name": "typing_extensions",
@@ -1180,7 +1228,7 @@
           {
             "name": "zc.lockfile",
             "purl": "",
-            "version": "4.0"
+            "version": "4.1"
           }
         ],
         "ruby": [],
@@ -1189,21 +1237,21 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 119,
+        "freebsd": 123,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 66,
+        "python": 70,
         "ruby": 0,
         "rust": 0,
-        "total": 185
+        "total": 193
       }
     },
     "pkg-aarch64": {
       "app_version": "5.1.3",
       "arch": "aarch64",
-      "generated": "2026-11-17T09:27:09Z",
+      "generated": "2026-11-20T12:53:32Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2308,9 +2356,9 @@
       }
     },
     "pkg-latest-aarch64": {
-      "app_version": "5.1.2",
+      "app_version": "5.1.3",
       "arch": "aarch64",
-      "generated": "2026-11-17T09:27:13Z",
+      "generated": "2026-11-20T12:53:36Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -2635,14 +2683,6 @@
           },
           {
             "licenses": [
-              "BSD3CLAUSE",
-              "APACHE20"
-            ],
-            "name": "mDNSResponder",
-            "version": "2881.120.11"
-          },
-          {
-            "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "mpdecimal",
@@ -2667,7 +2707,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.9.0"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -2689,6 +2729,13 @@
             ],
             "name": "py312-annotated-doc",
             "version": "0.0.5"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-annotated-types",
+            "version": "0.8.0"
           },
           {
             "licenses": [
@@ -2716,7 +2763,7 @@
               "MPL20"
             ],
             "name": "py312-certifi",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "licenses": [
@@ -2727,17 +2774,10 @@
           },
           {
             "licenses": [
-              "BSD0CLAUSE"
-            ],
-            "name": "py312-chardet",
-            "version": "7.6.0,1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "py312-charset-normalizer",
-            "version": "3.5.1"
+            "version": "3.5.2"
           },
           {
             "licenses": [
@@ -2780,7 +2820,7 @@
               "APACHE20"
             ],
             "name": "py312-cryptography",
-            "version": "50.0.1_1,1"
+            "version": "50.0.2,1"
           },
           {
             "licenses": [
@@ -2837,6 +2877,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-jaraco.classes",
+            "version": "3.4.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-jaraco.collections",
             "version": "5.2.1"
           },
@@ -2866,14 +2913,14 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-markdown",
-            "version": "3.11"
+            "version": "3.11.3"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-markdown-it-py",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -2887,14 +2934,22 @@
               "MIT"
             ],
             "name": "py312-more-itertools",
-            "version": "11.1.0"
+            "version": "11.2.1"
           },
           {
             "licenses": [
               "BSD3CLAUSE"
             ],
             "name": "py312-oauthlib",
-            "version": "4.0.0"
+            "version": "4.0.1"
+          },
+          {
+            "licenses": [
+              "MIT",
+              "APACHE20"
+            ],
+            "name": "py312-orjson",
+            "version": "3.11.9_3"
           },
           {
             "licenses": [
@@ -2935,13 +2990,6 @@
             "licenses": [
               "MIT"
             ],
-            "name": "py312-pybonjour",
-            "version": "1.1.1_1"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
             "name": "py312-pycares",
             "version": "5.0.1"
           },
@@ -2950,7 +2998,21 @@
               "BSD3CLAUSE"
             ],
             "name": "py312-pycparser",
-            "version": "3.0"
+            "version": "3.1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pydantic-core",
+            "version": "2.50.4"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pydantic2",
+            "version": "2.14.3"
           },
           {
             "licenses": [
@@ -2986,6 +3048,13 @@
             ],
             "name": "py312-python-dateutil",
             "version": "2.9.0"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pytz",
+            "version": "2026.5,1"
           },
           {
             "licenses": [
@@ -3083,7 +3152,7 @@
               "PSFL"
             ],
             "name": "py312-sqlite3",
-            "version": "3.12.15_10"
+            "version": "3.12.16_10"
           },
           {
             "licenses": [
@@ -3097,14 +3166,14 @@
               "APACHE20"
             ],
             "name": "py312-tempora",
-            "version": "5.12.0"
+            "version": "5.13.0"
           },
           {
             "licenses": [
               "MIT"
             ],
             "name": "py312-typer",
-            "version": "0.27.2_1"
+            "version": "0.29.1"
           },
           {
             "licenses": [
@@ -3124,6 +3193,13 @@
             "licenses": [
               "MIT"
             ],
+            "name": "py312-typing-inspection",
+            "version": "0.4.5"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
             "name": "py312-urllib3",
             "version": "2.8.0,1"
           },
@@ -3132,7 +3208,7 @@
               "ZPL21"
             ],
             "name": "py312-zc.lockfile",
-            "version": "4.0"
+            "version": "4.1"
           },
           {
             "name": "python3",
@@ -3143,7 +3219,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -3159,7 +3235,7 @@
               "WTFPL"
             ],
             "name": "sabnzbd",
-            "version": "5.1.2"
+            "version": "5.1.3"
           },
           {
             "licenses": [
@@ -3212,6 +3288,11 @@
             "version": "0.0.5"
           },
           {
+            "name": "annotated-types",
+            "purl": "",
+            "version": "0.8.0"
+          },
+          {
             "name": "apprise",
             "purl": "",
             "version": "1.13.1"
@@ -3229,7 +3310,7 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.7.22"
+            "version": "2026.10.23"
           },
           {
             "name": "cffi",
@@ -3237,14 +3318,9 @@
             "version": "2.1.1"
           },
           {
-            "name": "chardet",
-            "purl": "",
-            "version": "7.6.0"
-          },
-          {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.5.1"
+            "version": "3.5.2"
           },
           {
             "name": "cheetah",
@@ -3269,7 +3345,7 @@
           {
             "name": "cryptography",
             "purl": "",
-            "version": "50.0.1"
+            "version": "50.0.2"
           },
           {
             "name": "example",
@@ -3307,6 +3383,11 @@
             "version": "3.20"
           },
           {
+            "name": "jaraco.classes",
+            "purl": "",
+            "version": "3.4.0"
+          },
+          {
             "name": "jaraco.collections",
             "purl": "",
             "version": "5.2.1"
@@ -3329,12 +3410,12 @@
           {
             "name": "markdown",
             "purl": "",
-            "version": "3.11"
+            "version": "3.11.3"
           },
           {
             "name": "markdown-it-py",
             "purl": "",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "name": "mdurl",
@@ -3344,12 +3425,17 @@
           {
             "name": "more-itertools",
             "purl": "",
-            "version": "11.1.0"
+            "version": "11.2.1"
           },
           {
             "name": "oauthlib",
             "purl": "",
-            "version": "4.0.0"
+            "version": "4.0.1"
+          },
+          {
+            "name": "orjson",
+            "purl": "",
+            "version": "3.11.9"
           },
           {
             "name": "paho-mqtt",
@@ -3377,11 +3463,6 @@
             "version": "0.4.1"
           },
           {
-            "name": "pybonjour",
-            "purl": "",
-            "version": "1.1.1"
-          },
-          {
             "name": "pycares",
             "purl": "",
             "version": "5.0.1"
@@ -3389,7 +3470,17 @@
           {
             "name": "pycparser",
             "purl": "",
-            "version": "3.0"
+            "version": "3.1"
+          },
+          {
+            "name": "pydantic",
+            "purl": "",
+            "version": "2.14.3"
+          },
+          {
+            "name": "pydantic_core",
+            "purl": "",
+            "version": "2.50.4"
           },
           {
             "name": "pygments",
@@ -3410,6 +3501,11 @@
             "name": "python-dateutil",
             "purl": "",
             "version": "2.9.0"
+          },
+          {
+            "name": "pytz",
+            "purl": "",
+            "version": "2026.5"
           },
           {
             "name": "pyyaml",
@@ -3479,7 +3575,7 @@
           {
             "name": "sqlite3",
             "purl": "",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "name": "sqlobject",
@@ -3489,17 +3585,22 @@
           {
             "name": "tempora",
             "purl": "",
-            "version": "5.12.0"
+            "version": "5.13.0"
           },
           {
             "name": "typer",
             "purl": "",
-            "version": "0.27.2"
+            "version": "0.29.1"
           },
           {
             "name": "typer-slim",
             "purl": "",
             "version": "0.24.0"
+          },
+          {
+            "name": "typing-inspection",
+            "purl": "",
+            "version": "0.4.5"
           },
           {
             "name": "typing_extensions",
@@ -3514,7 +3615,7 @@
           {
             "name": "zc.lockfile",
             "purl": "",
-            "version": "4.0"
+            "version": "4.1"
           }
         ],
         "ruby": [],
@@ -3523,15 +3624,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 122,
+        "freebsd": 126,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 67,
+        "python": 72,
         "ruby": 0,
         "rust": 0,
-        "total": 189
+        "total": 198
       }
     }
   }
